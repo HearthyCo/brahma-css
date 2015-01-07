@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>DEVELOPERS</title>
+    <style>
+        body {font-family: monospace;font-size: 12px;}
+        p {margin:0;padding:0;line-height:.8em;}
+    </style>
+</head>
+<body>
+<div id="container"></div>
+<script type="application/javascript">
+    var container = document.getElementById("container");
+    var getSize = function() {return Math.random() * 4 + 0.5};
+    var getFloat = function() {return (Math.random() < 0.5) ? "left" : "right"};
+    var getBlack = function() {return Math.floor(Math.random() * 250 + 5)};
+    var newWord = function(size, float, black) {
+        var word = document.createElement("p");
+        word.innerHTML = "DEVELOPERS";
+        word.style.fontSize = size + "rem";
+        word.style.opacity = size + "rem";
+        word.style.float = float;
+        word.style.color = "rgb(" + [black, black, black].join(',') + ")";
+        console.log("rgb(" + [black, black, black].join(',') + ")");
+        return word;
+    };
+    var addWord = function(word) {return container.appendChild(word)};
+    var run = function(){addWord(newWord(getSize(), getFloat(), getBlack()))};
+    var time = setInterval(run, 50);
+</script>
+</body>
+</html>
