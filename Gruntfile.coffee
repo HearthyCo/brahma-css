@@ -109,8 +109,9 @@ module.exports = (grunt) ->
 
   grunt.registerTask "lint", ["csslint"]
   grunt.registerTask "pure", ["copy"]
-  grunt.registerTask "css", ["clean", "pure", "pure_grids", "compass", "myth", "cssmin", "replace:dist"]
-  grunt.registerTask "development", ["css"]
+  grunt.registerTask "css", ["pure_grids", "compass", "myth", "cssmin", "replace:dist"]
+  grunt.registerTask "build", ["clean", "pure", "css"]
+  grunt.registerTask "development", ["build"]
   grunt.registerTask "preproduction"
   grunt.registerTask "production"
   grunt.registerTask "default", ['development']
