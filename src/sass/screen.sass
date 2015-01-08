@@ -1,4 +1,15 @@
-/* Pure based */
-@import "pure/all"
-@import "pure/extended/more-form-grid"
-@import "themes/brahma.theme"
+/* Loading Bourbon, Neat and Bitters. */
+//--- Bourbon
+@import "bourbon/bourbon"
+
+// To use Neat functions in Bitters: @import "base/grid-settings"; before Neat
+//   and import the rest of bitters after.
+//--- Bitters for Neat
+@import "base/grid-settings"
+
+// To use Bitters and Neat without Ruby on Rails, change the import for neat-helpers
+//   inside _grid-settings.scss to "../neat-helpers".
+//--- Neat
+@import "neat/neat"
+//--- Bitters
+@import "base/base"

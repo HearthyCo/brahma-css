@@ -1,4 +1,9 @@
 source 'https://rubygems.org'
 
-# Specify your gem's dependencies in semantic-ui-sass.gemspec
-gemspec
+gem 'compass'
+gem 'bourbon'
+gem 'neat'
+gem 'bitters'
+
+# Specify your gem's dependencies in brahma-css.gemspec
+# gemspec
