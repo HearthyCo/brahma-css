@@ -3,7 +3,7 @@
 /*
   ************
   GRID
-  *************
+  *************/
 
 $grid-columns: 16 !default
 
@@ -110,7 +110,7 @@ $grid-columns: 16 !default
   :width auto
   :font-size 0
 
-/* Common
+/* Common */
 [class*=" column-"], [class^="column-"], .column
   :display inline-block
   :vertical-align top
@@ -128,36 +128,36 @@ $grid-columns: 16 !default
 .wide
   :width 100%
 
-/* Fractional columns
+/* Fractional columns */
 @include _grid-fractional('')
 
-/* Grid columns
+/* Grid columns */
 @include _grid-column-n('')
 
-/* Proportional columns
+/* Proportional columns */
 @include _grid-columns-n('')
 
-/* Mobile only
+/* Mobile only */
 @media only #{$query-mobile}
   @include _grid-classes('mobile')
 
-/* Tablet only
+/* Tablet only */
 @media only #{$query-tablet}
   @include _grid-classes('tablet')
 
-/* Desktop only
+/* Desktop only */
 @media only #{$query-desktop}
   @include _grid-classes('desktop')
 
-/* Desktop LD
+/* Desktop LD */
 @media only #{$query-desktop-ld}
   @include _grid-classes('desktop-ld')
 
-/* Desktop HD
+/* Desktop HD */
 @media only #{$query-desktop-hd}
   @include _grid-classes('desktop-hd')
 
-/* Desktop FullHD
+/* Desktop FullHD */
 @media only #{$query-desktop-fullhd}
   @include _grid-classes('desktop-fullhd')
 
@@ -165,7 +165,7 @@ $grid-columns: 16 !default
 //  Extras
 //****************************
 
-/* Full-width image
+/* Full-width image */
 .img
   :max-width 100%
   :height auto
