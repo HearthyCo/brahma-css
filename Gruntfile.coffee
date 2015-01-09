@@ -18,6 +18,19 @@ module.exports = (grunt) ->
           sassDir: 'src/sass/'
           cssDir: 'dist/'
 
+    copy:
+      css:
+        files: [
+          {
+            expand: true,
+            cwd: 'dist/',
+            src: ['**/*.css', '!**/*.min.css'],
+            dest: 'dist/',
+            rename: (dest, src) ->
+              return dest + src.replace(/\.css$/, ".scss")
+          }
+        ]
+
     csslint:
       options:
         csslintrc: '.csslintrc'
@@ -43,7 +56,7 @@ module.exports = (grunt) ->
           cwd: 'dist/'
           src: ['*.css']
           dest: 'dist/'
-          ext: '.css'
+          ext: '.scss'
         }]
 
     watch:
@@ -55,13 +68,14 @@ module.exports = (grunt) ->
 
   grunt.loadNpmTasks "grunt-contrib-clean"
   grunt.loadNpmTasks "grunt-contrib-compass"
+  grunt.loadNpmTasks "grunt-contrib-copy"
   grunt.loadNpmTasks "grunt-contrib-csslint"
   grunt.loadNpmTasks "grunt-contrib-cssmin"
   grunt.loadNpmTasks "grunt-myth"
   grunt.loadNpmTasks "grunt-contrib-watch"
 
   grunt.registerTask "lint", ["csslint"]
-  grunt.registerTask "css", ["compass", "myth", "cssmin"]
+  grunt.registerTask "css", ["compass", "myth", "cssmin", "copy:css"]
   grunt.registerTask "build", ["clean", "css"]
   grunt.registerTask "development", ["build"]
   grunt.registerTask "preproduction"
