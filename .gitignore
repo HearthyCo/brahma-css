@@ -9,3 +9,5 @@
 bower_components/
 dist/
 node_modules/
+Gemfile.lock
+install.bash
