@@ -1,0 +1,16 @@
+$page-all-sep-color: #ccc
+$page-all-sep-space: 2rem
+
+.entry
+  @include row()
+  padding: $page-all-sep-space 0
+  border-top: 1px dotted $page-all-sep-color
+  position: relative
+
+  .title
+    position: absolute
+    top: $page-all-sep-space * (-0.4)
+    left: 0
+    color: $page-all-sep-color
+    background-color: white
+    padding-right: 1rem
