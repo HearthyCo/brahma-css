@@ -1,2 +1,8 @@
-#container
+$content-top-space: 0 !default
+$content-bottom-space: 0 !default
+
+.comp-page
   @include outer-container()
+  > .main-section
+    padding-top: $content-top-space
+    padding-bottom: $content-bottom-space

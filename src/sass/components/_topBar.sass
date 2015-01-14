@@ -1,0 +1,19 @@
+$topbar-height: 1.5em !default
+$content-top-space: 0 !default
+$content-top-space: ($topbar-height + $content-top-space)
+
+.comp-topBar
+  position: fixed
+  width: 100%
+  height: $topbar-height
+  max-width: inherit
+  top: 0
+  .left-box
+    @include span-columns(1 of 5)
+    text-align: left
+  .center-box
+    @include span-columns(3 of 5)
+    text-align: center
+  .right-box
+    @include span-columns(1 of 5)
+    text-align: right
