@@ -1,0 +1,23 @@
+.comp-mainlistentry
+
+  .entry-button
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+
+    font-size: 40px
+    color: white
+    background-color: white
+    @include linear-gradient(to bottom, #adcfff, #8991ff)
+
+    padding: 20px
+    height: 230px
+    user-select: none
+    cursor: pointer
+
+  .entry-content
+    display: none
+
+    &.is-expanded
+      display: block
