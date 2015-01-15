@@ -1,11 +1,13 @@
-$topbar-height: 1.5em !default
+$topbar-height: 1.5rem !default
 $content-top-space: 0 !default
 $content-top-space: ($topbar-height + $content-top-space)
 
 .comp-topBar
   @include row()
-  position: fixed
+  @include fixed()
+  @include background-bar()
   width: 100%
+  color: $white
   height: $topbar-height
   max-width: inherit
   top: 0
