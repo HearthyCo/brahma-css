@@ -1,18 +1,14 @@
 .comp-mainlistentry
 
   .entry-button
-    display: flex
-    flex-direction: row
+    @include display-flex()
     justify-content: space-between
-    align-items: center
-
-    font-size: 40px
-    color: white
-    background-color: white
-    @include linear-gradient(to bottom, #adcfff, #8991ff)
-
-    padding: 20px
-    height: 230px
+    font-size: $font-size-xxl
+    color: $white
+    background-color: $white
+    @include linear-gradient(to bottom, $blue, $dark-blue)
+    padding: rem(20)
+    height: rem(230)
     user-select: none
     cursor: pointer
 
