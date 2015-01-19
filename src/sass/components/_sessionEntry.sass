@@ -6,19 +6,27 @@
   background-color: $lighter-gray
 
   .session-label
-    padding: rem(20)
     @include span-columns(4 of 5)
-    @include display-flex()
-    justify-content: space-between
-
+    padding: rem(20)
+    @include row()
+    .date
+      @include span-columns(3)
+      @include display-flex()
+    .time
+      @include span-columns(3)
+      @include display-flex()
+      .clock
+        margin-right: rem(3)
     .session-title
+      @include span-columns(5)
+      @include display-flex()
       margin-left: rem(10)
+      text-transform: uppercase
 
   .session-link
+    @include span-columns(1 of 5)
+    @include display-flex()
     background-color: $light-blue
     color: $white
     text-align: center
-    @include span-columns(1 of 5)
-    @include display-flex()
-    align-self: stretch
-    justify-content: center
+    text-transform: uppercase

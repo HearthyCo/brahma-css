@@ -3,6 +3,8 @@ $content-bottom-space: 0 !default
 
 .comp-page
   @include outer-container()
+  @include media($widescreen)
+    max-width: rem(1400)
   > .main-section
     @include row()
     padding-top: $content-top-space

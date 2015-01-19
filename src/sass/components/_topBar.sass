@@ -1,22 +1,50 @@
-$topbar-height: 1.5rem !default
+$topbar-height: rem(50) !default
 $content-top-space: 0 !default
 $content-top-space: ($topbar-height + $content-top-space)
 
 .comp-topBar
-  @include row()
-  @include fixed()
   @include background-bar()
+  border-bottom: 4px solid $white
+  box-shadow: $shadow
   width: 100%
-  color: $white
   height: $topbar-height
-  max-width: inherit
-  top: 0
-  .left-box
-    @include span-columns(1 of 5)
-    text-align: left
-  .center-box
-    @include span-columns(3 of 5)
-    text-align: center
-  .right-box
-    @include span-columns(1 of 5)
-    text-align: right
+  padding: rem(10)
+  @include fixed()
+  @include media($computer)
+    max-width: inherit
+    right: initial
+    left: initial
+  .topBar-wrapper
+    max-width: rem(1088)
+    margin: auto
+    color: $white
+    @include row()
+    @include fill-up()
+    @include media($widescreen)
+      max-width: rem(1400)
+    .left-box
+      @include span-columns(1 of 5)
+      text-align: left
+      height: 100%
+      .menuBar
+        @include fill-up()
+        font-weight: bold
+        a.menu-icon
+          color: $white
+    .center-box
+      @include span-columns(3 of 5)
+      text-align: center
+      height: 100%
+      .logoBar
+        @include fill-up()
+        font-weight: bold
+    .right-box
+      @include span-columns(1 of 5)
+      text-align: right
+      height: 100%
+      .iconBar
+        @include fill-up()
+        @include background-image(url(res/images/logo.png))
+        background-repeat: no-repeat
+        background-size: contain
+        background-position: right

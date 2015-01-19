@@ -4,12 +4,15 @@
   .left-box
     @include span-columns(1 of 5)
     text-align: left
+    @include fill-up()
   .center-box
     @include span-columns(3 of 5)
     text-align: center
+    @include fill-up()
   .right-box
     @include span-columns(1 of 5)
     text-align: right
+    @include fill-up()
 
     .comp-localeSelect
       display: inline

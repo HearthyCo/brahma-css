@@ -10,13 +10,24 @@
   display: flex
   flex-direction: row
   align-items: center
+  align-self: stretch
+  justify-content: center
 
 @mixin fixed()
   position: fixed
   z-index: 1
+  box-sizing: border-box
+  top: 0
+  right: 0
+  left: 0
 
 @mixin background-bar()
   background-color: $dark-blue
   padding: rem(5)
   color: $white
+
+@mixin fill-up()
+  height: 100%
+  width: 100%
+  box-sizing: border-box
 
