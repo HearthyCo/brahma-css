@@ -12,7 +12,8 @@ $content-top-space: ($topbar-height + $content-top-space)
     right: initial
     left: initial
   .topBar-wrapper
-    max-width: rem(1280)
+    padding: rem(10)
+    max-width: rem(1320)
     margin: auto
     color: $white
     border-bottom: 4px solid $white
@@ -22,7 +23,6 @@ $content-top-space: ($topbar-height + $content-top-space)
     @include media($widescreen)
       max-width: rem(1500)
     .left-box
-      padding: rem(10)
       @include span-columns(1 of 5, block-collapse)
       text-align: left
       height: 100%
@@ -33,7 +33,6 @@ $content-top-space: ($topbar-height + $content-top-space)
           color: $white
           font-size: $font-size-xl
     .center-box
-      padding: rem(10)
       @include span-columns(3 of 5, block-collapse)
       text-align: center
       height: 100%
@@ -41,7 +40,6 @@ $content-top-space: ($topbar-height + $content-top-space)
         @include fill-up()
         font-weight: bold
     .right-box
-      padding: rem(10)
       @include span-columns(1 of 5, block-collapse)
       text-align: right
       height: 100%
