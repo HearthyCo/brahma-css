@@ -1,5 +1,11 @@
 body
+  margin: 0
   .comp-page
     font-size: $font-size-m
     @include media($widescreen)
       max-width: rem(1500)
+    .wrapper
+      padding: 0 rem(10)
+      box-sizing: border-box
+      @include media($computer)
+        padding: 0
