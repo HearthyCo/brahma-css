@@ -1,11 +1,11 @@
 .comp-sessionentry
   @include display-flex()
   justify-content: space-between
-  font-size: $font-size-l
   color: $black
   background-color: $lighter-gray
 
   .session-label
+    @include ellipsis()
     @include span-columns(4 of 5)
     padding: rem(20)
     @include row()
@@ -15,8 +15,9 @@
     .time
       @include span-columns(3)
       @include display-flex()
-      .clock
+      .icon-clock
         margin-right: rem(3)
+        font-size: $font-size-l
     .session-title
       @include span-columns(5)
       @include display-flex()
