@@ -35,3 +35,14 @@
   text-overflow: ellipsis
   overflow: hidden
   width: auto
+
+@mixin BgColor-Hover($baseColor)
+  background-color: $baseColor
+  cursor: pointer
+  &:hover
+    background-color: darken($baseColor, 10%)
+
+@mixin Color-Hover($baseColor)
+  color: $baseColor
+  &:hover
+    color: darken($baseColor, 10%)
