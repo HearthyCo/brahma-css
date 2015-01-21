@@ -7,13 +7,27 @@ $red-bg:$dark-red
 
   .icon
     font-size: $font-size-xxxl
+    @include media($widescreen)
+      font-size: $font-size-xxxl-icon
 
   .badge
     @include position (absolute, -30px -30px null null)
     width: rem(60)
     height: rem(60)
     line-height: rem(60)
-    font-size: $font-size-xl
+    @include media($mobileOnly)
+      width: rem(50)
+      height: rem(50)
+      line-height: rem(50)
+      top: rem(-20)
+      right: rem(-20)
+    @include media($widescreen)
+      width: rem(75)
+      height: rem(75)
+      line-height: rem(75)
+      top: rem(-35)
+      right: rem(-35)
     background-color: $red-bg
     border-radius: 50%
     box-shadow: $shadow
+    @extend .title

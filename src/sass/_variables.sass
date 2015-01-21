@@ -2,7 +2,7 @@
 $field-set-margin: 0.5rem
 
 //Font size variables
-$base-font-size: 1.2rem
+$base-font-size: 1.1rem
 
 $font-size-xs: $base-font-size * 0.5
 $font-size-s: $base-font-size * 0.75
@@ -11,6 +11,8 @@ $font-size-l: $base-font-size * 1.25
 $font-size-xl: $base-font-size * 1.5
 $font-size-xxl: $base-font-size * 2.5
 $font-size-xxxl: $base-font-size * 4
+
+$font-size-xxxl-icon: $base-font-size * 5
 
 //Color variables
 $bg-amount:10%
@@ -44,9 +46,11 @@ $shadow: 0px 2px 3px rgba(50, 50, 50, 0.50)
 $mobileOnly: new-breakpoint(max-width rem(640), 6) // Small screens 6 columns
 
 $tablet: new-breakpoint(min-width rem(641)) // Medium screens
-$tabletOnly: new-breakpoint(min-width rem(641) max-width rem(1280)) // Medium screens
+$tabletOnly: new-breakpoint(min-width rem(641) max-width rem(1224)) // Medium screens
 
-$computer: new-breakpoint(min-width rem(1281)) // Large screens
-$computerOnly: new-breakpoint(min-width rem(1281) max-width rem(1920)) // Large screens
+$mobileTablet: new-breakpoint(max-width rem(1224)) // Mobile and tablet only
 
-$widescreen : new-breakpoint(min-width rem(1920)) // large screens
+$computer: new-breakpoint(min-width rem(1225)) // Large screens Desktops and laptops
+$computerOnly: new-breakpoint(min-width rem(1225) max-width rem(1920)) // Large screens
+
+$widescreen : new-breakpoint(min-width rem(1920)) // Large screens TV etc...

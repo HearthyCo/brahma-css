@@ -3,29 +3,31 @@
   justify-content: space-between
   color: $black
   background-color: $lighter-gray
+  @extend .text
 
   .session-label
     @include ellipsis()
-    @include span-columns(4 of 5)
-    padding: rem(20)
+    @include span-columns(5 of 7)
+    padding: rem(20) 0 rem(20) rem(20)
     @include row()
     .date
-      @include span-columns(3)
-      @include display-flex()
+      margin-right: 5%
+      @include media($tablet)
+        margin-right: 15%
     .time
-      @include span-columns(3)
-      @include display-flex()
+      margin-right: 5%
+      @include media($tablet)
+        margin-right: 15%
       .icon-clock
-        margin-right: rem(3)
-        font-size: $font-size-l
+        margin-right: rem(2)
+        @include media($mobileOnly)
+          display: none
+          margin-right: rem(0)
     .session-title
-      @include span-columns(5)
-      @include display-flex()
-      margin-left: rem(10)
       text-transform: uppercase
 
   .session-link
-    @include span-columns(1 of 5)
+    @include span-columns(2 of 7)
     @include display-flex()
     background-color: $light-blue
     color: $white
