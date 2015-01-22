@@ -1,33 +1,34 @@
 $red-bg:$dark-red
 
 .comp-iconbadge
-  @include position (relative, null null null null)
+  +position (relative, null null null null)
   text-align: center
   margin-right: rem(25)
 
   .icon
     font-size: $font-size-xxxl
-    @include media($widescreen)
+    +media($widescreen)
       font-size: $font-size-xxxl-icon
 
   .badge
-    @include position (absolute, -30px -30px null null)
-    width: rem(60)
-    height: rem(60)
-    line-height: rem(60)
-    @include media($mobileOnly)
-      width: rem(50)
-      height: rem(50)
-      line-height: rem(50)
-      top: rem(-20)
-      right: rem(-20)
-    @include media($widescreen)
-      width: rem(75)
-      height: rem(75)
-      line-height: rem(75)
-      top: rem(-35)
+    +position (absolute, -30px -30px null null)
+    width: rem(50)
+    height: rem(50)
+    line-height: rem(50)
+    top: rem(-20)
+    +media($mobileOnly)
+      width: rem(40)
+      height: rem(40)
+      line-height: rem(40)
+      top: rem(-10)
+      right: rem(-15)
+    +media($widescreen)
+      width: rem(70)
+      height: rem(70)
+      line-height: rem(70)
+      top: rem(-45)
       right: rem(-35)
     background-color: $red-bg
     border-radius: 50%
     box-shadow: $shadow
-    @extend .title
+    @extend %title

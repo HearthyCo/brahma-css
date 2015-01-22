@@ -2,8 +2,8 @@ $content-top-space: 0 !default
 $content-bottom-space: 0 !default
 
 .comp-page
-  @include outer-container()
+  +outer-container()
   > .main-section
-    @include row()
+    +row()
     padding-top: $content-top-space
     padding-bottom: $content-bottom-space

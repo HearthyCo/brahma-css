@@ -1,19 +1,21 @@
 .comp-professionalbrief
-  @include display-flex()
+  +display-flex()
   .avatar
     border: 4px solid $blue
     border-radius: 50%
     height: auto
-    width: rem(140)
-    @include media($computer)
-      width: rem(170)
-      border-width: 5px
-    @include media($widescreen)
+    width: rem(150)
+    min-width: rem(100)
+    min-height: rem(100)
+    +media($computer)
       width: rem(200)
+      border-width: 5px
+    +media($widescreen)
+      width: rem(250)
       border-width: 6px
   .brief-info
     flex-shrink: 2
-    @extend .text
+    @extend %text
     p
       margin: 0 rem(20) rem(8)
       .brief-key

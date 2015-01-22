@@ -1,9 +1,9 @@
 .comp-mainlistentry
 
   .entry-button
-    @include display-flex()
+    +display-flex()
     justify-content: space-between
-    @extend .extra-title
+    @extend %extra-title
     color: $white
     @extend .blue-button
     padding: rem(20)

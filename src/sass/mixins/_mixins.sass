@@ -25,6 +25,11 @@
   background-color: $dark-blue
   color: $white
 
+@mixin span-top-bar($basePerc)
+  display: block
+  float: left
+  width: $basePerc
+
 @mixin fill-up()
   height: 100%
   width: 100%
@@ -36,13 +41,13 @@
   overflow: hidden
   width: auto
 
-@mixin BgColor-Hover($baseColor)
+@mixin bg-color-hover($baseColor)
   background-color: $baseColor
   cursor: pointer
   &:hover
     background-color: darken($baseColor, 10%)
 
-@mixin Color-Hover($baseColor)
+@mixin color-hover($baseColor)
   color: $baseColor
   &:hover
     color: darken($baseColor, 10%)

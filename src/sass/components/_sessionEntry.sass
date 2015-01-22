@@ -1,35 +1,35 @@
 .comp-sessionentry
-  @include display-flex()
+  +display-flex()
   justify-content: space-between
   color: $black
   background-color: $lighter-gray
-  @extend .text
+  @extend %text
 
   .session-label
-    @include ellipsis()
-    @include span-columns(5 of 7)
+    +ellipsis()
+    +span-columns(5 of 7)
     padding: rem(20) 0 rem(20) rem(20)
-    @include row()
+    +row()
     .date
       margin-right: 5%
-      @include media($tablet)
+      +media($tablet)
         margin-right: 15%
     .time
       margin-right: 5%
-      @include media($tablet)
+      +media($tablet)
         margin-right: 15%
       .icon-clock
         margin-right: rem(2)
-        @include media($mobileOnly)
+        +media($mobileOnly)
           display: none
           margin-right: rem(0)
     .session-title
       text-transform: uppercase
 
   .session-link
-    @include span-columns(2 of 7)
-    @include display-flex()
-    +BgColor-Hover($light-blue)
+    +span-columns(2 of 7)
+    +display-flex()
+    +bg-color-hover($light-blue)
     color: $white
     text-align: center
     text-transform: uppercase

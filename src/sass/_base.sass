@@ -2,43 +2,17 @@ body
   margin: 0
 
   .comp-page
-    @include media($widescreen)
+    +media($widescreen)
       max-width: rem(1500)
 
     .wrapper
       padding: 0 rem(10)
       box-sizing: border-box
-      @include media($computer)
+      +media($computer)
         padding: 0
-
-    .extra-icon
-      font-size: $font-size-xxxl
-      @include media($mobileOnly)
-        font-size: $font-size-xxl
-      @include media($widescreen)
-        font-size: $font-size-xxxl-icon
-    .extra-title
-      font-size: $font-size-xxl
-      @include media($mobileOnly)
-        font-size: $font-size-xl
-      @include media($widescreen)
-        font-size: $font-size-xxxl
-    .title
-      font-size: $font-size-xl
-      @include media($mobileOnly)
-        font-size: $font-size-l
-      @include media($widescreen)
-        font-size: $font-size-xxl
-    .text
-      font-size: $font-size-l
-      @include media($mobileOnly)
-        font-size: $font-size-m
-      @include media($widescreen)
-        font-size: $font-size-xl
-
     .blue-button
-      +BgColor-Hover($blue)
+      +bg-color-hover($blue)
     .gray-button
-      +BgColor-Hover($gray)
+      +bg-color-hover($gray)
     .red-button
-      +BgColor-Hover($red)
+      +bg-color-hover($red)

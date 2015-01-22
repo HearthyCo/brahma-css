@@ -2,13 +2,13 @@ $spot-blue: lighten($blue, $bg-amount)
 
 .comp-timelineentry
   margin-left: 15%
-  @include media($tablet)
+  +media($tablet)
     margin-left: 20%
-  @include media($computer)
+  +media($computer)
     margin-left: 25%
-  @include media($widescreen)
+  +media($widescreen)
     margin-left: 30%
-  @extend .text
+  @extend %text
   .session-wrapper
     padding-bottom: rem(40)
     padding-left: rem(40)
@@ -25,21 +25,21 @@ $spot-blue: lighten($blue, $bg-amount)
       display: block
       position: absolute
       left: 0
-      @include media($mobileOnly)
+      +media($mobileOnly)
         height: rem(20)
         width: rem(20)
         margin-left: rem(-11)
-      @include media($widescreen)
+      +media($widescreen)
         height: rem(35)
         width: rem(35)
         margin-left: rem(-18)
-    @include media($mobileOnly)
+    +media($mobileOnly)
       padding-bottom: rem(20)
       padding-left: rem(20)
-    @include media($widescreen)
+    +media($widescreen)
       top: rem(-3)
     .session-head
-      @include ellipsis()
+      +ellipsis()
       .date
         font-weight: bold
         .datetime
@@ -47,8 +47,8 @@ $spot-blue: lighten($blue, $bg-amount)
       .session-title
         text-transform: uppercase
     .session-body
-      @include ellipsis()
+      +ellipsis()
       font-weight: 300
     .session-foot
       .session-link
-        +Color-Hover($medium-gray)
+        +color-hover($medium-gray)
