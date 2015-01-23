@@ -7,7 +7,9 @@
     color: $white
     @extend .blue-button
     padding: rem(20)
-    height: rem(230)
+    height: rem(200)
+    +media($widescreen)
+      height: rem(250)
     user-select: none
     text-transform: uppercase
     font-weight: 600

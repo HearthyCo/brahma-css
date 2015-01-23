@@ -46,8 +46,12 @@
   cursor: pointer
   &:hover
     background-color: darken($baseColor, 10%)
+  &:active
+    background-color: darken($baseColor, 10%)
 
 @mixin color-hover($baseColor)
   color: $baseColor
   &:hover
+    color: darken($baseColor, 10%)
+  &:active
     color: darken($baseColor, 10%)

@@ -1,4 +1,5 @@
 $red-bg:$dark-red
+$icon-shadow: $shadow
 
 .comp-iconbadge
   +position (relative, null null null null)
@@ -6,9 +7,12 @@ $red-bg:$dark-red
   margin-right: rem(25)
 
   .icon
+    vertical-align: sub
+    text-shadow: $icon-shadow
     font-size: $font-size-xxxl-icon
     +media($mobileOnly)
       font-size: $font-size-xxxl
+      vertical-align: text-top
     +media($widescreen)
       font-size: 6.5rem
 

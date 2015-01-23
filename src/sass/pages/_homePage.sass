@@ -1,0 +1,23 @@
+$newsession-height: rem(70) !default
+
+.comp-page
+  &.homePage
+    padding-bottom: $newsession-height
+    .page-home
+      #balance
+        .entry-button
+          @extend .red-button
+      .new-session
+        padding: 20px
+        background: aliceblue
+        height: $newsession-height
+        position: fixed
+        z-index: 1
+        box-sizing: border-box
+        right: 0
+        left: 0
+        width: 100%
+        bottom: 0
+        @extend .comp-page
+        .icon
+          color: $red
