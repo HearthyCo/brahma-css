@@ -6,21 +6,24 @@ $red-bg:$dark-red
   margin-right: rem(25)
 
   .icon
-    font-size: $font-size-xxxl
+    font-size: $font-size-xxxl-icon
+    +media($mobileOnly)
+      font-size: $font-size-xxxl
     +media($widescreen)
-      font-size: $font-size-xxxl-icon
+      font-size: 6.5rem
 
   .badge
     +position (absolute, -30px -30px null null)
     width: rem(50)
     height: rem(50)
     line-height: rem(50)
-    top: rem(-20)
+    top: rem(-40)
+    right: rem(-20)
     +media($mobileOnly)
       width: rem(40)
       height: rem(40)
       line-height: rem(40)
-      top: rem(-10)
+      top: rem(-35)
       right: rem(-15)
     +media($widescreen)
       width: rem(70)
