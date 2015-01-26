@@ -1,3 +1,6 @@
 .page-loginPage
-  +span-columns(6)
-  +one-column() // it's the only one
+  padding: rem(40) 0
+  @extend %text
+  +media($tablet)
+    +span-columns(6)
+    +one-column() // it's the only one
