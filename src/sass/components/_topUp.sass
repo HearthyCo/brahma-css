@@ -1,0 +1,58 @@
+.comp-topup
+  padding: rem(20) 0
+
+  .topup-quantitypick
+    border-bottom: 4px solid $light-gray
+    padding: rem(10) 0
+    font-weight: 500
+
+    .label
+      @extend %title
+      background: $light-gray
+      padding: rem(20) 0
+      text-align: center
+      text-transform: uppercase
+
+    .topup-amounts
+      @extend %title
+      padding: rem(20) 0
+      +display-flex()
+      flex-wrap: wrap
+      text-align: center
+      .topup-amount
+        cursor: pointer
+        margin: rem(10) 0
+        width: 30%
+        &:before
+          content: ""
+          height: rem(40)
+          width: rem(40)
+          background: $gray
+          border: 4px solid $light-gray
+          border-radius: 50%
+          display: inline-block
+          vertical-align: middle
+          margin-right: rem(5)
+
+        &.active
+          &:before
+            background: $red
+
+  .topup-confirm
+
+    .label
+      @extend %title
+      text-align: center
+      font-weight: 300
+      margin: rem(20) 0
+
+    .button
+      @extend .red-button
+      @extend %text
+      color: $white
+      padding: rem(20)
+      font-weight: 600
+      text-transform: uppercase
+      width: 35%
+      margin: auto
+      text-align: center
