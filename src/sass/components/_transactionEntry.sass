@@ -1,0 +1,48 @@
+.comp-transactionentry
+  +display-flex()
+  color: $black
+  @extend %title
+  margin: rem(3) 0
+
+  .transaction-label
+    +span-columns(3 of 4, block-collapse)
+    padding: rem(15)
+    +row()
+    .session-date
+      +ellipsis()
+      .date
+        font-weight: 600
+        margin-right: rem(25)
+
+      .time
+        font-weight: 600
+
+    .session-title
+      font-weight: 500
+      text-transform: uppercase
+      +ellipsis()
+    // .session-profesional
+    //   font-weight: 300
+    //   text-transform: capitalize
+    //   +ellipsis()
+
+  &:nth-child(even)
+    background-color: $white
+  &:nth-child(odd)
+    background-color: $lighter-gray
+
+  .transaction-value
+    +span-columns(1 of 4, block-collapse)
+    +display-flex()
+    background-color: $blue
+    color: $white
+    text-align: center
+    text-transform: uppercase
+    font-weight: 600
+    @extend %extra-title
+    .sign
+      margin-right: rem(3)
+    .amount
+  &.amount-minus
+    .transaction-value
+      background-color: $red

@@ -1,0 +1,17 @@
+.comp-balancewidget
+  margin: rem(10)
+  text-align: center
+  .icon
+    color: $blue
+    font-size: $font-size-xxxl-icon
+    +media($mobileOnly)
+      font-size: $font-size-xxxl
+    +media($widescreen)
+      font-size: 6.5rem
+  .label
+    font-weight: 300
+    @extend %title
+    text-transform: uppercase
+  .amount
+    font-weight: 600
+    @extend %extra-title
