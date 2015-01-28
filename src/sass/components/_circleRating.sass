@@ -1,0 +1,26 @@
+.comp-circlerating
+  display: flex
+  flex-direction: row
+  .circle-1, .circle-2, .circle-3, .circle-4, .circle-5
+    background: $white
+    height: rem(25)
+    width: rem(25)
+    margin-right: rem(8)
+    border-radius: 50%
+    &:last-child
+      margin-right: 0
+  .circle-1
+    &.circle-filled
+      background: #99FFCC
+  .circle-2
+    &.circle-filled
+      background: #CCFF99
+  .circle-3
+    &.circle-filled
+      background: #FFFF99
+  .circle-4
+    &.circle-filled
+      background: #FFCC99
+  .circle-5
+    &.circle-filled
+      background: #FF9999
