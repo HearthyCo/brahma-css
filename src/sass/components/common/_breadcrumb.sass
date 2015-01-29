@@ -3,34 +3,53 @@
   display: flex
   flex-direction: row
   align-items: center
-  height: 100%
-  width: 100%
+  background-color: $breadcrumb-bg
+  padding: rem(10)
 
   .crumb
-    margin-right: 16px
+    +display-flex()
+    margin-right: rem(10)
     @extend .red-button
-    padding: 10px
-    border-radius: 4px
+    height: rem(55)
+    border-radius: rem(4)
     position: relative
-    &:after
-      top: 50%
-      right: -15px
-      margin-top: -16px
-      position: absolute
-      display: block
-      content: ""
-      width: 32px
-      height: 32px
-      @extend .red-button
-      transform: rotate(45deg) skew(15deg, 15deg)
-      border-radius: 4px
-      z-index: -1
+    color: $white
+    padding-left: rem(18)
+    width: 30%
+    @extend %breadcrum-arrow
+    .label
+      +ellipsis()
+      text-transform: uppercase
+      font-weight: 500
+    &:nth-child(1)
+      width: auto
+      z-index: 40
+      padding-left: 0
+      .label
+        display: none
+      &:before
+        display: none
+    &:nth-child(2)
+      z-index: 30
+      .icon
+        display: none
+    &:nth-child(3)
+      z-index: 20
+      .icon
+        display: none
+    &:nth-child(4)
+      width: auto
+      z-index: 10
+      padding-right: rem(10)
+      width: 37%
+      .icon
+        display: none
+      &:after
+        display: none
     .icon
-      color: $white
-      @extend %extra-title
+      @extend %extra-icon
       &.icon-home
         span
           display: none
     .label
-      @extend %title
-      z-index: 1
+      @extend %text
