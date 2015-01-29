@@ -1,0 +1,25 @@
+.comp-allergyentry
+  color: $dark-gray
+  +position (relative, null null null null)
+  display: flex
+  flex-direction: row
+  background-color: $lighter-gray
+  margin-bottom: rem(5)
+  height: rem(100)
+  justify-content: space-between
+  padding: 0 rem(20)
+  align-items: center
+  opacity: 0.8
+  &:hover
+    opacity: 1
+    color: $black
+  .label
+    @extend %title
+    text-transform: uppercase
+    font-weight: 500
+  .value
+    @extend %text
+    line-height: 2rem
+    text-transform: uppercase
+    font-weight: 300
+    text-align: right
