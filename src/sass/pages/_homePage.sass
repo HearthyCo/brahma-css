@@ -4,9 +4,15 @@ $newsession-height: rem(70) !default
   &.homePage
     padding-bottom: $newsession-height
     .page-home
-      #balance
+      #sessions
+        .entry-button
+          @extend .blue-button
+      #history
         .entry-button
           @extend .red-button
+      #balance
+        .entry-button
+          @extend .turquoise-button
       .new-session
         padding: 20px
         background: aliceblue
