@@ -5,7 +5,10 @@
   align-items: center
   background-color: $breadcrumb-bg
   padding: rem(10)
-
+  +media($computer)
+    padding: rem(15)
+  +media($widescreen)
+    padding: rem(20)
   .crumb
     +display-flex()
     margin-right: rem(10)
@@ -53,3 +56,31 @@
           display: none
     .label
       @extend %text
+
+    +media($tablet)
+      height: rem(70)
+      margin-right: rem(15)
+      &:after
+        right: rem(-18)
+        margin-top: rem(-20)
+        width: rem(40)
+        height: rem(40)
+      &:before
+        left: rem(-20)
+        margin-top: rem(-18)
+        width: rem(36)
+        height: rem(36)
+    +media($widescreen)
+      height: rem(86)
+      margin-right: rem(20)
+      border-radius: rem(6)
+      &:after
+        right: rem(-22)
+        margin-top: rem(-25)
+        width: rem(50)
+        height: rem(50)
+      &:before
+        left: rem(-22)
+        margin-top: rem(-20)
+        width: rem(40)
+        height: rem(40)
