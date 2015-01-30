@@ -10,6 +10,10 @@
   margin-bottom: rem(5)
   height: rem(100)
   opacity: 0.8
+  +media($computer)
+    height: rem(120)
+  +media($widescreen)
+    height: rem(150)
   &:hover
     opacity: 1
     color: $black

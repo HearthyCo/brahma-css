@@ -9,6 +9,14 @@
     border-radius: 50%
     &:last-child
       margin-right: 0
+    +media($computer)
+      height: rem(30)
+      width: rem(30)
+      margin-right: rem(7)
+    +media($widescreen)
+      height: rem(35)
+      width: rem(35)
+      margin-right: rem(8)
   .circle-1
     &.circle-filled
       background: #A4C546
