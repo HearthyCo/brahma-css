@@ -17,27 +17,36 @@ $font-size-xxxl-icon: $base-font-size * 5
 //Color variables
 $bg-amount:10%
 
-$black:#222
+$black: #222
 $black-bg: darken($black, $bg-amount)
 
-$dark-gray: #333
-$medium-gray: #888
-$gray: #CCC
-$light-gray: #eee
+
+$gray: #CACACA
+$medium-gray: darken($gray, $bg-amount)
+$dark-gray: shade($medium-gray, 60%)
+$light-gray: lighten($gray, $bg-amount)
 $lighter-gray: tint($light-gray, 60%)
 
 $white:#FFF
 
-$red:#FF4500
+$red: #E66564
 $dark-red: darken($red, $bg-amount)
-$light-red: #FBE3E4
+$light-red: lighten($red, $bg-amount)
 
-$blue: #477DCA
+$blue: #73A0CB
 $dark-blue: darken($blue, $bg-amount)
-$light-blue: lighten($blue, 20%)
+$light-blue: lighten($blue, $bg-amount)
 
 $light-yellow: #FFF6BF
-$light-green: #E6EFC2
+
+$orange: #FDA32A
+$cyan: #90D0D9
+$turquoise: #68BFBA
+
+$green: #A4C863
+$light-green: lighten($green, $bg-amount)
+$dark-green: darken($green, $bg-amount)
+
 
 //Efeccts
 $shadow: 0px 2px 3px rgba(50, 50, 50, 0.50)
