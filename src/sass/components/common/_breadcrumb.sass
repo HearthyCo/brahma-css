@@ -12,7 +12,6 @@
   .crumb
     +display-flex()
     margin-right: rem(10)
-    @extend .red-button
     height: rem(55)
     border-radius: rem(4)
     position: relative
@@ -84,3 +83,39 @@
         margin-top: rem(-20)
         width: rem(40)
         height: rem(40)
+
+
+.page-allPage
+  .comp-breadcrumb
+    .crumb
+      @extend .turquoise-button
+      &:after
+        @extend .turquoise-button
+
+.page-sessions
+  .comp-breadcrumb
+    .crumb
+      @extend .blue-button
+      &:after
+        @extend .blue-button
+
+.page-history
+  .comp-breadcrumb
+    .crumb
+      @extend .red-button
+      &:after
+        @extend .red-button
+
+.page-topupPage
+  .comp-breadcrumb
+    .crumb
+      @extend .cyan-button
+      &:after
+        @extend .cyan-button
+
+.page-treatments
+  .comp-breadcrumb
+    .crumb
+      @extend .green-button
+      &:after
+        @extend .green-button
