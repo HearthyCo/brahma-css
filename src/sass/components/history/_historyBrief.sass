@@ -1,0 +1,39 @@
+.comp-historybrief
+  .activity
+    background-color: $red
+    @extend %extra-title
+    padding: rem(10) rem(25)
+    text-transform: uppercase
+    color: $white
+    text-align: center
+    font-weight: 500
+
+  .section
+    .section-title
+      background-color: $light-gray
+      @extend %title
+      padding: rem(10) rem(25)
+      text-transform: uppercase
+      font-weight: 500
+
+    .history-entry
+      background-color: $lighter-gray
+      display: block
+      color: $black
+      padding: rem(10) rem(25)
+      margin-bottom: rem(5)
+
+      .title
+        @extend %title
+        text-transform: uppercase
+      .description
+        @extend %text
+        color: $dark-gray
+
+  .histories-more
+    display: block
+    text-align: center
+    padding: rem(15)
+    font-weight: 600
+    @extend %text
+    +color-hover($medium-gray)
