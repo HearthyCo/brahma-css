@@ -3,6 +3,8 @@ $newsession-height: rem(70) !default
 .comp-page
   &.homePage
     padding-bottom: $newsession-height
+    .main-section
+      background-color: $blue
     .page-home
       #sessions
         .entry-button
@@ -13,6 +15,12 @@ $newsession-height: rem(70) !default
       #balance
         .entry-button
           @extend .cyan-button
+      #treatments
+        .entry-button
+          @extend .green-button
+      #configuration
+        .entry-button
+          @extend .turquoise-button
       .new-session
         padding: 20px
         background: $white
