@@ -1,5 +1,5 @@
 .comp-allergyentry
-  color: $black
+  color: $dark-gray
   +position (relative, null null null null)
   display: flex
   flex-direction: row
@@ -16,10 +16,10 @@
   .label
     @extend %title
     text-transform: uppercase
-    font-weight: 500
+    font-weight: bold
   .value
     @extend %text
     line-height: 2rem
     text-transform: uppercase
-    font-weight: 300
+    font-weight: lighter
     text-align: right

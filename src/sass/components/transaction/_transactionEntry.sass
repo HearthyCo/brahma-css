@@ -1,6 +1,6 @@
 .comp-transactionentry
   +display-flex()
-  color: $black
+  color: $dark-gray
   @extend %title
   margin: rem(3) 0
 
@@ -11,18 +11,18 @@
     .session-date
       +ellipsis()
       .date
-        font-weight: 600
+        font-weight: bold
         margin-right: rem(25)
 
       .time
-        font-weight: 600
+        font-weight: bold
 
     .session-title
-      font-weight: 500
+      font-weight: bold
       text-transform: uppercase
       +ellipsis()
     .session-profesional
-      font-weight: 300
+      font-weight: lighter
       text-transform: capitalize
       +ellipsis()
 
@@ -38,7 +38,7 @@
     color: $white
     text-align: center
     text-transform: uppercase
-    font-weight: 600
+    font-weight: bold
     @extend %extra-title
     .sign
       margin-right: rem(3)
