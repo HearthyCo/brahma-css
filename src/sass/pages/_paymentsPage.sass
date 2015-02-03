@@ -1,32 +1,36 @@
-.page-paymentsPage
-  .comp-balancewidget
-    padding: rem(20) 0
-    .icon
-      @extend %extra-icon
-      color: $cyan
-    .label
-      color: $black
-      background-color: transparent
-      padding: rem(0)
-      font-weight: 300
-  .button
-    @extend .cyan-button
-    @extend %text
-    color: $white
-    padding: rem(20)
-    font-weight: 600
-    text-transform: uppercase
-    margin: 0 auto rem(20)
-    text-align: center
-    display: block
-    width: 35%
+.paymentsPage
+  .main-section
+    background-color: $lighter-gray
+    .page-paymentsPage
+      background-color: $white
+      .comp-balancewidget
+        padding: rem(20) 0
+        .icon
+          @extend %extra-icon
+          color: $cyan
+        .label
+          color: $dark-gray
+          background-color: transparent
+          padding: rem(0)
+          font-weight: lighter
+      .button
+        @extend .cyan-button
+        @extend %text
+        color: $white
+        padding: rem(20)
+        font-weight: bold
+        text-transform: uppercase
+        margin: 0 auto rem(20)
+        text-align: center
+        display: block
+        width: 35%
 
-  .label
-    padding: rem(20)
-    text-align: center
-    background-color: $cyan
-    @extend %title
-    text-transform: uppercase
-    color: $white
-    font-weight: 600
-  .transactions
+      .label
+        padding: rem(20)
+        text-align: center
+        background-color: $cyan
+        @extend %title
+        text-transform: uppercase
+        color: $white
+        font-weight: bold
+      .transactions

@@ -1,37 +1,40 @@
-.page-allergy
-  background: $lighter-gray
-  h1
-    background: $white
-    text-align: center
-    padding: rem(20)
-    @extend %extra-title
-    .generalTitle
-      text-transform: uppercase
-      font-weight: 500
-    .specificTitle
-      font-weight: 300
-  .severity
-    +display-flex()
-    padding: rem(20) rem(15)
-    @extend %title
-    .label
-      font-weight: 500
-    .comp-circlerating
-      margin-left: rem(15)
-    .ratingText
-      margin-left: rem(15)
-      text-transform: uppercase
-      font-weight: 300
+.allergyPage
+  .main-section
+    background-color: $lighter-gray
+    .page-allergy
+      background: $lighter-gray
+      h1
+        background: $white
+        text-align: center
+        padding: rem(20)
+        @extend %extra-title
+        .generalTitle
+          text-transform: uppercase
+          font-weight: bold
+        .specificTitle
+          font-weight: lighter
+      .severity
+        +display-flex()
+        padding: rem(20) rem(15)
+        @extend %title
+        .label
+          font-weight: bold
+        .comp-circlerating
+          margin-left: rem(15)
+        .ratingText
+          margin-left: rem(15)
+          text-transform: uppercase
+          font-weight: lighter
 
-  .symptoms
-    .label
-      padding: rem(15)
-      background: $red
-      color: $white
-      text-align: center
-      @extend %title
-      font-weight: 500
-      text-transform: uppercase
-    .value
-      padding: rem(15)
+      .symptoms
+        .label
+          padding: rem(15)
+          background: $red
+          color: $white
+          text-align: center
+          @extend %title
+          font-weight: bold
+          text-transform: uppercase
+        .value
+          padding: rem(15)
       @extend %text
