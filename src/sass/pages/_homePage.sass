@@ -6,6 +6,7 @@ $newsession-height: rem(70) !default
     .main-section
       background-color: $blue
     .page-home
+      background-color: $white
       #sessions
         .entry-button
           @extend .blue-button
@@ -18,7 +19,7 @@ $newsession-height: rem(70) !default
       #treatments
         .entry-button
           @extend .green-button
-      #configuration
+      #config
         .entry-button
           @extend .turquoise-button
       .new-session
@@ -35,3 +36,10 @@ $newsession-height: rem(70) !default
         @extend .comp-page
         .icon
           color: $red
+      .view-more
+        display: block
+        text-align: center
+        padding: rem(15)
+        font-weight: bold
+        @extend %text
+        +color-hover($medium-gray)
