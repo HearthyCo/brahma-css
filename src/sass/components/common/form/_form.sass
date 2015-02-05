@@ -1,0 +1,65 @@
+$form-icon-size: rem(65)
+
+.comp-signupForm, .comp-loginForm
+  @extend %text
+  #login
+    @extend .wrapper
+    +display-flex()
+    margin: rem(10)
+  #password
+    @extend .wrapper
+    +display-flex()
+    margin: rem(10)
+  .label
+    +display-flex()
+    height: $form-icon-size
+    width: $form-icon-size
+    background-color: $light-gray
+    color: $medium-gray
+    label
+      font-size: 0px
+  .field
+    +display-flex()
+    +calc(width, "100% - #{$form-icon-size}")
+    textarea, input[type="email"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="url"], input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="time"], input[type="week"], select[multiple=multiple]
+      @extend %text
+      transition:box-shadow
+      box-shadow: 0 0 0
+      border-radius: 0
+      border: 0
+      margin-bottom: 0
+      background-color: $lighter-gray
+      height: $form-icon-size
+      color: $black
+      &:active, &:focus
+        box-shadow: $light-gray 0px 0px 0px 3px inset
+  .forgotten-pass
+    @extend .wrapper
+    a
+      color: $dark-gray
+      padding: 0 rem(10) rem(20)
+      display: block
+
+  button, input[type="submit"]
+    @extend %text
+    @extend .red-button
+    font-family: "MuseoSans"
+    border-radius: 0
+    padding: rem(20)
+    text-transform: uppercase
+    width: 75%
+    max-width: rem(350)
+    margin: rem(10) auto
+    display: block
+  .create-account, .start-session
+    margin-top: rem(50)
+    padding: rem(50)
+    text-align: center
+    background-color: $lighter-gray
+    a
+      padding: rem(10)
+      display: block
+      color: $dark-gray
+      text-transform: uppercase
+      text-decoration: underline
+      font-weight: bold

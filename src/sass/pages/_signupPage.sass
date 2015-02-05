@@ -2,5 +2,8 @@
   padding: rem(40) 0
   @extend %text
   +media($tablet)
+    +span-columns(8)
+    +one-column() // it's the only one
+  +media($computer)
     +span-columns(6)
     +one-column() // it's the only one
