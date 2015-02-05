@@ -2,7 +2,7 @@ $form-icon-size: rem(65)
 
 .comp-signupForm, .comp-loginForm
   @extend %text
-  #login
+  #email
     @extend .wrapper
     +display-flex()
     margin: rem(10)
@@ -16,6 +16,7 @@ $form-icon-size: rem(65)
     width: $form-icon-size
     background-color: $light-gray
     color: $medium-gray
+    margin-bottom: 0
     label
       font-size: 0px
   .field
