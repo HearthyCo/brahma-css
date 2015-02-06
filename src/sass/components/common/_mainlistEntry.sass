@@ -3,7 +3,6 @@
   .entry-button
     +display-flex()
     justify-content: space-between
-    @extend %extra-title
     color: $white
     @extend .blue-button
     padding: rem(20)
@@ -13,6 +12,8 @@
     user-select: none
     text-transform: uppercase
     font-weight: bold
+    .label
+      @extend %extra-title
 
   .entry-content
     display: none
