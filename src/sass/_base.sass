@@ -10,6 +10,10 @@ body
       box-sizing: border-box
       +media($computer)
         padding: 0
+      a
+        color: $dark-gray
+        &:hover, &:active, &:focus
+          color: $red
 
 .blue-button
   +bg-color-hover($blue)

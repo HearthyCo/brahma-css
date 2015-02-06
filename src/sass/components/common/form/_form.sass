@@ -24,7 +24,7 @@ $form-icon-size: rem(65)
     +calc(width, "100% - #{$form-icon-size}")
     textarea, input[type="email"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="url"], input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="time"], input[type="week"], select[multiple=multiple]
       @extend %text
-      transition:box-shadow
+      transition: box-shadow
       box-shadow: 0 0 0
       border-radius: 0
       border: 0
@@ -36,6 +36,7 @@ $form-icon-size: rem(65)
         box-shadow: $light-gray 0px 0px 0px 3px inset
   .forgotten-pass
     @extend .wrapper
+    @extend %small-text
     a
       color: $dark-gray
       padding: 0 rem(10) rem(20)
