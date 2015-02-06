@@ -1,7 +1,7 @@
-$topbar-height: rem(60) !default
+$topbar-height: rem(80) !default
 $content-top-space: 0 !default
 $content-top-space: ($topbar-height + $content-top-space)
-$icon-size:rem(89)
+$icon-size:rem(103)
 
 .comp-topBar
   width: 100%
@@ -15,44 +15,44 @@ $icon-size:rem(89)
     max-width: rem(1224)
     color: $white
     +row()
-    +fill-up()
+    height: 100%
     +media($widescreen)
       max-width: rem(1500)
     .left-box
-      +span-top-bar(25%)
-      padding: rem(10)
-      text-align: left
+      +span-top-bar(30%)
+      padding: rem(20)
       height: 100%
       background-image: url(/res/images/header-bg.png)
+      background-size: contain
       .menuBar
-        font-weight: bold
         .icon
-          vertical-align: middle
           color: $white
-          @extend %extra-title
+          @extend %title
     .center-box
-      +span-top-bar(50%)
-      padding: rem(12)
-      text-align: center
+      +span-top-bar(40%)
+      padding: rem(10)
       height: 100%
       background-image: url(/res/images/header-bg.png)
+      background-size: contain
       .logoBar
         background-image: url(/res/images/logo.png)
         background-size: contain
         background-repeat: no-repeat
         background-position: center center
-        height: 100%
+        height: rem(45)
     .right-box
-      +span-top-bar(25%)
+      +span-top-bar(30%)
       .iconBar
         background-image: url(/res/images/icon-header-bg.png)
+        background-size: contain
         background-repeat: no-repeat
         display: inline-block
         width: $icon-size
-        height: rem(60)
+        height: $topbar-height
       &:after
         +calc(width, "100% - #{$icon-size}")
         content: ""
         background-image: url(/res/images/header-bg.png)
-        height: rem(60)
+        background-size: contain
+        height: $topbar-height
         display: inline-block
