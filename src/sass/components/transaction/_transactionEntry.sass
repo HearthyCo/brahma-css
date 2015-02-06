@@ -1,48 +1,45 @@
 .comp-transactionentry
   +display-flex()
+  justify-content: space-between
   color: $dark-gray
-  @extend %title
+  @extend %text
   margin: rem(3) 0
 
   .transaction-label
-    +span-columns(3 of 4, block-collapse)
-    padding: rem(15)
+    +span-columns(2 of 5, block-collapse)
+    padding: rem(15) 0 rem(15) rem(15)
     +row()
-    .session-date
-      +ellipsis()
-      .date
-        font-weight: bold
-        margin-right: rem(25)
-
-      .time
-        font-weight: bold
-
-    .session-title
+    .session-reason
       font-weight: bold
       text-transform: uppercase
       +ellipsis()
-    .session-profesional
+    .session-title
       font-weight: lighter
       text-transform: capitalize
       +ellipsis()
+
+  .transaction-date
+    +span-columns(1 of 5, block-collapse)
+
+    .date
+      font-weight: bold
+
+  .transaction-value
+    +span-columns(2 of 5, block-collapse)
+    @extend %title
+    padding: rem(15) rem(15) rem(15) 0
+    text-align: right
+    text-transform: uppercase
+    font-weight: bold
+    .sign
+      margin-right: rem(3)
+    .amount
+      +ellipsis()
+  // &.amount-minus
+  //   .transaction-value
+  //     color: $red
 
   &:nth-child(even)
     background-color: $white
   &:nth-child(odd)
     background-color: $lighter-gray
-
-  .transaction-value
-    +span-columns(1 of 4, block-collapse)
-    +display-flex()
-    background-color: $cyan
-    color: $white
-    text-align: center
-    text-transform: uppercase
-    font-weight: bold
-    @extend %extra-title
-    .sign
-      margin-right: rem(3)
-    .amount
-  &.amount-minus
-    .transaction-value
-      background-color: $red

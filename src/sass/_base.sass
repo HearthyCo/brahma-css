@@ -24,3 +24,23 @@ body
 .cyan-button
   +bg-color-hover($cyan)
 
+.button
+  @extend .red-button
+  @extend %text
+  color: $white
+  padding: rem(20)
+  font-weight: bold
+  text-transform: uppercase
+  width: 45%
+  min-width: rem(250)
+  max-width: rem(550)
+  margin: rem(5) auto
+  text-align: center
+  display: block
+  &:hover, &:active, &:focus
+    color: $white
+
+.label
+  font-weight: bold
+  text-transform: uppercase
+  @extend %title
