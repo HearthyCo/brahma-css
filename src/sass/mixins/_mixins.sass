@@ -43,11 +43,13 @@
 
 @mixin bg-color-hover($baseColor)
   background-color: $baseColor
+  transition: background-color 0.4s
   cursor: pointer
   &:hover, &:active, &:focus
     background-color: darken($baseColor, 10%)
 
 @mixin color-hover($baseColor)
   color: $baseColor
+  transition: color 0.4s
   &:hover, &:active, &:focus
     color: darken($baseColor, 10%)

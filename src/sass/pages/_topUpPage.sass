@@ -1,4 +1,7 @@
+$historial-height: rem(70) !default
+
 .topupPage
+  padding-bottom: $historial-height
   .main-section
     background-color: $lighter-gray
     .page-topupPage
@@ -6,12 +9,13 @@
       padding: rem(40) 0 rem(10)
       .comp-balancewidget
         .icon
-          color: $cyan
       .comp-topup
       .comp-iconbutton
-        margin-top: rem(10)
         @extend .cyan-button
         color: $white
+        min-height: $historial-height
         padding: rem(20) 0
         @extend %text
         text-transform: uppercase
+        +position (fixed, null 0 0 0)
+        margin-top: rem(10)

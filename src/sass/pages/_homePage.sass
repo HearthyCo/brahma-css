@@ -19,13 +19,16 @@ $newsession-height: rem(70) !default
         .entry-content
           margin-top: rem(50)
           .icon
-            margin-bottom: rem(50)
+            margin-bottom: rem(30)
           .payment-history-home
             background-color: $cyan
             color: $white
             padding: rem(10) rem(20)
           .button
             margin-bottom: rem(30)
+            color: $white
+            &:hover
+              color: $white
       #treatments
         .entry-button
           @extend .green-button
@@ -33,16 +36,13 @@ $newsession-height: rem(70) !default
         .entry-button
           @extend .turquoise-button
       .new-session
-        padding: 20px
+        padding: rem(20)
         background: $white
-        height: $newsession-height
-        position: fixed
+        min-height: $newsession-height
         z-index: 1
         box-sizing: border-box
-        right: 0
-        left: 0
         width: 100%
-        bottom: 0
+        +position (fixed, null 0 0 0)
         @extend .comp-page
         .icon
           color: $red

@@ -40,9 +40,7 @@ $breadcrumb-bg: $lighter-gray
 
 %breadcrum-arrow
   &:after
-    position: absolute
-    top: 50%
-    right: rem(-15)
+    +position (absolute, 50% rem(-15) null null)
     margin-top: rem(-16)
     content: ""
     width: rem(32)
@@ -51,9 +49,7 @@ $breadcrumb-bg: $lighter-gray
     border-radius: rem(4)
     z-index: -1
   &:before
-    position: absolute
-    top: 50%
-    left: rem(-16)
+    +position (absolute, 50% null null rem(-16))
     margin-top: rem(-14)
     content: ""
     width: rem(28)

@@ -22,13 +22,15 @@
     padding-left: rem(18)
     width: 30%
     @extend %breadcrum-arrow
+    &:hover, &:focus, &:active
+      color: $white
     .label
       +ellipsis()
       text-transform: uppercase
       font-weight: bold
     &:nth-child(1)
+      padding: rem(5)
       width: auto
-      padding-left: 0
       z-index: 40
       .label
         display: none
@@ -52,7 +54,7 @@
       &:after
         display: none
     .icon
-      @extend %extra-icon
+      @extend %extra-title
       &.icon-home
         span
           display: none
@@ -94,6 +96,10 @@
       @extend .blue-button
       &:after
         @extend .blue-button
+      &:nth-child(1)
+        @extend .green-button
+        &:after
+          @extend .green-button
 
 .historySection
   .comp-breadcrumb
@@ -101,6 +107,10 @@
       @extend .red-button
       &:after
         @extend .red-button
+      &:nth-child(1)
+        @extend .green-button
+        &:after
+          @extend .green-button
 
 .balanceSection
   .comp-breadcrumb
@@ -108,6 +118,10 @@
       @extend .cyan-button
       &:after
         @extend .cyan-button
+      &:nth-child(1)
+        @extend .green-button
+        &:after
+          @extend .green-button
 
 .tasksSection
   .comp-breadcrumb
@@ -115,3 +129,7 @@
       @extend .green-button
       &:after
         @extend .green-button
+      &:nth-child(1)
+        @extend .green-button
+        &:after
+          @extend .green-button
