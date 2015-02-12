@@ -1,4 +1,8 @@
+$button-height: rem(65)
+$padding-page: 2 * $button-height +rem(5)
+
 .sessionPage
+  padding-bottom: $padding-page
   .main-section
     background-color: $lighter-gray
     .page-session
@@ -6,9 +10,42 @@
       padding: rem(30) rem(0)
       +media($computer)
         padding: rem(30)
+      .session-report
+        margin-top: rem(30)
+        h2
+          text-transform: uppercase
+          @extend %title
+          display: inline-block
+        .icon
+          color: $blue
+          @extend %extra-title
+          margin-right: rem(10)
+          vertical-align: text-top
+        p
+          @extend %text
       .comp-iconbutton
-        padding: rem(10)
+        height: $button-height
         @extend .blue-button
+        padding: rem(15)
         margin-top: rem(5)
         color: $white
         text-transform: uppercase
+        &:nth-child(3)
+          +position (fixed, null 0 rem(68) 0)
+        &:nth-child(4)
+          +position (fixed, null 0 0 0)
+
+        +media ($tablet)
+          +calc(height, "#{$button-height} + 10px")
+          &:nth-child(3)
+            +position (fixed, null 0 rem(80) 0)
+          &:nth-child(4)
+            +position (fixed, null 0 0 0)
+
+        +media ($widescreen)
+          padding: rem(25)
+          +calc(height, "#{$button-height} + 45px")
+          &:nth-child(3)
+            +position (fixed, null 0 rem(115) 0)
+          &:nth-child(4)
+            +position (fixed, null 0 0 0)
