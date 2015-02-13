@@ -1,0 +1,76 @@
+.comp-sublistentry
+  margin-bottom: rem(5)
+
+  .entry-button
+    +display-flex()
+    justify-content: space-between
+    color: $white
+    @extend .blue-button
+    user-select: none
+    padding: rem(25) 10%
+    .label
+      h2
+        @extend %title
+        margin-bottom: 0
+      p
+        @extend %text
+        margin-bottom: 0
+        text-transform: lowercase
+        font-weight: normal
+    .icon
+      @extend %extra-icon
+      transition: 0.2s ease-in-out
+  .entry-content
+    background-color: $white
+    overflow: hidden
+    +animation-name (none)
+    @extend %text
+    display: none
+    .title
+      margin: rem(35) rem(20)
+      strong
+        margin: 0 rem(6)
+
+  &.is-expanded
+    .entry-content
+      display: block
+      +animation-duration (0.2s)
+      +animation-name (FromNone)
+      +animation-fill-mode (forwards)
+    .icon
+      transform: rotate(90deg)
+
+  // &:not(.is-expanded)
+
+  &.is-collapsed
+    .entry-content
+      display: block
+      +animation-duration (0.2s)
+      +animation-name (FromBlock)
+      +animation-fill-mode (forwards)
+
+  &:last-child
+    .entry-button
+      @extend .gray-button
+
++keyframes (FromNone)
+  0%
+    display: none
+    height: 0
+  1%
+    display: block
+    height: 0
+  100%
+    display: block
+    height: rem(250)
+
++keyframes (FromBlock)
+  0%
+    display: block
+    height: rem(250)
+  99%
+    display: block
+    height: 0
+  100%
+    display: none
+    height: 0
