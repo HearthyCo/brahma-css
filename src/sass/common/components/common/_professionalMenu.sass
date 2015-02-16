@@ -1,0 +1,40 @@
+#menu
+  background-color: #1f262c
+  color: white
+  height: 100%
+
+.top-area
+  background-color: $green
+
+  .logo
+    background-color: darken($green, 10%)
+    border-bottom: 1px solid lighten($green, 10%)
+    padding: 10px
+    text-align: center
+
+    &:after
+      content: "Hearthy"
+
+  .userMenu
+    float: right
+    position: relative
+    cursor: pointer
+
+    span
+      transform: rotate(90deg)
+      padding: 10px
+
+    .userMenu-content
+      display: none
+      position: absolute
+      right: 0
+      width: 120px
+      background-color: darken($green, 10%)
+      border: 1px solid lighten($green, 10%)
+      text-align: center
+
+      li:hover
+        background-color: $green
+
+    &.is-expanded .userMenu-content
+      display: block
