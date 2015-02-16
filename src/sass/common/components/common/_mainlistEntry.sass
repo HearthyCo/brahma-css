@@ -1,7 +1,7 @@
 .comp-mainlistentry
   perspective: 1000px
   perspective-origin: 50% rem(170)
-  background: gray
+  background: $medium-gray
 
   .entry-button
     +display-flex()
@@ -19,34 +19,34 @@
       @extend %extra-title
 
   .entry-content
+    box-sizing: border-box
     display: none
     backface-visibility: hidden
-    background-color: rgb(128,128,128)
     transform-origin: 50% 0
     transform-style: preserve-3d
-    transition: background-color .4s
     animation-timing-function: ease-in-out
 
   &.is-expanded
     .entry-content
       display: block
       +animation-duration (.4s)
-      +animation-name (FoldToNone)
+      +animation-name (FoldFromNone)
       +animation-fill-mode (forwards)
 
   &.is-collapsed
     .entry-content
       display: block
       +animation-duration (.4s)
-      +animation-name (FoldToBlock)
+      +animation-name (FoldFromBlock)
       +animation-fill-mode (forwards)
 
 //ANIMATION
 
-+keyframes (FoldToNone)
++keyframes (FoldFromNone)
   0%
     display: none
     max-height: 0
+    transform: rotateX(-90deg)
   0.1%
     display: block
     max-height: 0
@@ -54,14 +54,14 @@
     opacity: .1
   100%
     display: block
-    max-height: rem(650)
+    max-height: rem(750)
     transform: rotateX(0)
     opacity: 1
 
-+keyframes (FoldToBlock)
++keyframes (FoldFromBlock)
   0%
     display: block
-    max-height: rem(650)
+    max-height: rem(750)
     transform: rotateX(0)
     opacity: 1
   99.9%
@@ -72,3 +72,5 @@
   100%
     display: none
     max-height: 0
+    transform: rotateX(-90deg)
+    padding: 0px
