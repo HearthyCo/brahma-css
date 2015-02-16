@@ -1,4 +1,7 @@
 .comp-mainlistentry
+  perspective: 1000px
+  perspective-origin: 50% rem(170)
+  background: gray
 
   .entry-button
     +display-flex()
@@ -17,6 +20,55 @@
 
   .entry-content
     display: none
+    backface-visibility: hidden
+    background-color: rgb(128,128,128)
+    transform-origin: 50% 0
+    transform-style: preserve-3d
+    transition: background-color .4s
+    animation-timing-function: ease-in-out
 
-    &.is-expanded
+  &.is-expanded
+    .entry-content
       display: block
+      +animation-duration (.4s)
+      +animation-name (FoldToNone)
+      +animation-fill-mode (forwards)
+
+  &.is-collapsed
+    .entry-content
+      display: block
+      +animation-duration (.4s)
+      +animation-name (FoldToBlock)
+      +animation-fill-mode (forwards)
+
+//ANIMATION
+
++keyframes (FoldToNone)
+  0%
+    display: none
+    max-height: 0
+  0.1%
+    display: block
+    max-height: 0
+    transform: rotateX(-90deg)
+    opacity: .1
+  100%
+    display: block
+    max-height: rem(650)
+    transform: rotateX(0)
+    opacity: 1
+
++keyframes (FoldToBlock)
+  0%
+    display: block
+    max-height: rem(650)
+    transform: rotateX(0)
+    opacity: 1
+  99.9%
+    display: block
+    max-height: 0
+    transform: rotateX(-90deg)
+    opacity: .1
+  100%
+    display: none
+    max-height: 0
