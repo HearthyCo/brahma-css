@@ -1,0 +1,68 @@
+.comp-withsidebar
+  display: flex
+  height: 100%
+  align-items: stretch
+
+  .toggle-button
+    display: block
+    position: absolute
+    top: 0px
+    right: 0px
+    padding: 10px
+    transition: transform 0.2s
+    transform: rotate(180deg)
+
+  .content
+    flex: 1 1 auto
+
+  .side-content
+    width: rem(275)
+
+  .side-wrapper
+    background-color: #f3f3f3
+    border-left: 1px solid #e4e4e4
+    display: none
+    width: rem(275)
+    flex: 0 0 auto
+    overflow: hidden
+    +animation-name (none)
+
+  &.is-expanded
+    .side-wrapper
+      display: block
+      +animation-duration (0.2s)
+      +animation-name (SBFromNone)
+      +animation-fill-mode (forwards)
+    .toggle-button
+      transform: rotate(0deg)
+
+  &.is-collapsed
+    .side-wrapper
+      display: block
+      +animation-duration (0.2s)
+      +animation-name (SBFromBlock)
+      +animation-fill-mode (forwards)
+
+//ANIMATION
+
++keyframes (SBFromNone)
+  0%
+    display: none
+    width: 0
+  1%
+    display: block
+    width: 0
+  100%
+    display: block
+    width: rem(275)
+
++keyframes (SBFromBlock)
+  0%
+    display: block
+    width: rem(275)
+  99%
+    display: block
+    width: 0
+  100%
+    display: none
+    width: 0
