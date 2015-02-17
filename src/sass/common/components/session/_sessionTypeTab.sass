@@ -1,0 +1,42 @@
+.comp-sessionTypeTab
+  color: #698495
+  margin-top: rem(20)
+  margin-bottom: rem(20)
+  padding: rem(8)
+
+  h2
+    font-size: $font-size-s
+    text-transform: uppercase
+
+  .sessiontype-queue
+    display: flex
+    justify-content: space-between
+
+    .queue-status
+      .queue-length
+        color: white
+
+    .queue-assign
+      font-size: rem(11)
+      padding: rem(6)
+      text-transform: uppercase
+      font-weight: normal
+      background-color: #698495
+      &:hover, &:active, &:focus
+        background-color: lighten(#698495, 10%)
+
+  .sessiontype-sessions
+    margin-top: rem(14)
+
+    li
+      display: flex
+      justify-content: space-between
+
+      .session-title
+        color: #d1dadf
+
+      .session-timer
+        &.good
+          color: $green
+        &.bad
+          color: $red
