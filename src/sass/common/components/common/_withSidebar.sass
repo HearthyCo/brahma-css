@@ -35,12 +35,12 @@
     overflow: hidden
     +animation-name (none)
     .side-header
-      padding: auto rem(10)
       width: rem(275)
       border-bottom: rem(1) solid $light-gray
       background: $lighter-gray
       height: rem(60)
       .icon
+        opacity: 0
         +position (relative, null null null null)
         font-size: $font-size-xl
         margin: rem(22) 0 rem(12) rem(15)
@@ -48,7 +48,7 @@
         align-items: center
         justify-content: center
         cursor: pointer
-        transition: color 0.4s
+        transition: color 0.4s, opacity 0.25s
         &:after
           content: '+'
           +position (absolute, null 0 -10px null)
@@ -67,6 +67,7 @@
 
     .side-content
       width: rem(275)
+      padding: rem(10)
 
   &.is-expanded
     .side-wrapper
@@ -74,6 +75,9 @@
       +animation-duration (0.2s)
       +animation-name (SBFromNone)
       +animation-fill-mode (forwards)
+      .side-header
+        .icon
+          opacity: 1
     .toggle-button
       transform: rotate(0deg)
 
@@ -83,6 +87,9 @@
       +animation-duration (0.2s)
       +animation-name (SBFromBlock)
       +animation-fill-mode (forwards)
+      .side-header
+        .icon
+          opacity: 0
 
 //ANIMATION
 
