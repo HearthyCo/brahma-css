@@ -17,12 +17,14 @@ $icon-shadow: $shadow
       font-size: 6.5rem
 
   .badge
-    +position (absolute, -30px -30px null null)
+    background-color: $red-bg
+    border-radius: 50%
+    box-shadow: $shadow
+    @extend %title
+    +position (absolute, rem(-40) rem(-20) null null)
     width: rem(50)
     height: rem(50)
     line-height: rem(50)
-    top: rem(-40)
-    right: rem(-20)
     +media($mobileOnly)
       width: rem(40)
       height: rem(40)
@@ -35,7 +37,3 @@ $icon-shadow: $shadow
       line-height: rem(70)
       top: rem(-45)
       right: rem(-35)
-    background-color: $red-bg
-    border-radius: 50%
-    box-shadow: $shadow
-    @extend %title
