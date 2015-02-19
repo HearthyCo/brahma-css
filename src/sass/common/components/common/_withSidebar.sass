@@ -3,31 +3,70 @@
   height: 100%
   align-items: stretch
 
+  .toogle
+    +position (absolute, rem(10) rem(15) null null)
+    span
+      width: rem(40)
+      height: rem(40)
+      color: $white
+      font-size: $font-size-xl
+      display: inline-flex
+      align-items: center
+      justify-content: center
+      border-radius: 50%
+      cursor: pointer
+      background: $light-gray
+      margin-left: rem(9)
+      padding: rem(0)
+      transition: background-color 0.4s, transform 0.2s
+      &:hover
+        background: $gray
+
   .toggle-button
-    font-size: $font-size-l
-    display: block
-    position: absolute
-    top: 0px
-    right: 0px
-    padding: rem(15)
-    transition: transform 0.2s
     transform: rotate(180deg)
-    cursor: pointer
 
   .content
     flex: 1 1 auto
 
-  .side-content
-    width: rem(275)
-
   .side-wrapper
-    background-color: #f3f3f3
-    border-left: 1px solid #e4e4e4
     display: none
     width: rem(275)
     flex: 0 0 auto
     overflow: hidden
     +animation-name (none)
+    .side-header
+      padding: auto rem(10)
+      width: rem(275)
+      border-bottom: rem(1) solid $light-gray
+      background: $lighter-gray
+      height: rem(60)
+      .icon
+        +position (relative, null null null null)
+        font-size: $font-size-xl
+        margin: rem(22) 0 rem(12) rem(15)
+        display: inline-flex
+        align-items: center
+        justify-content: center
+        cursor: pointer
+        transition: color 0.4s
+        &:after
+          content: '+'
+          +position (absolute, null 0 -10px null)
+          font-size: $font-size-m
+          color: $white
+          background-color: $red
+          border-radius: 50%
+          width: rem(16)
+          height: rem(16)
+          font-weight: bold
+          line-height: .68rem
+        &:hover
+          color: $medium-gray
+          &:after
+            background-color: $dark-red
+
+    .side-content
+      width: rem(275)
 
   &.is-expanded
     .side-wrapper

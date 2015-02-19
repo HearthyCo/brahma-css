@@ -1,16 +1,28 @@
 .comp-roommessage
   display: flex
+  margin-top: rem(10)
+  &:first-child
+    margin-top: rem(0)
 
   .message-avatar
     flex: 0 0 auto
-    margin: 5px
-    width: 35px
-    height: 35px
-    border-radius: 20px
+    margin-right: rem(10)
+    width: rem(40)
+    height: rem(40)
+    border-radius: 50%
 
   .message-content
     flex: 1 1 auto
-
+    line-height: 1.4rem
+    .message-header
+      .author
+        +ellipsis()
+        max-width: 60%
+        display: inline-block
+        vertical-align: middle
+      .time
+        margin-left: rem(20)
+        display: inline-block
+        vertical-align: middle
     .author
       font-weight: bold
-

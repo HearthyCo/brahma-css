@@ -1,5 +1,7 @@
+$sessionTypeTab-color: lighten($dark-bg, 40%)
+
 .comp-sessionTypeTab
-  color: #698495
+  color: $sessionTypeTab-color
   margin-top: rem(20)
   margin-bottom: rem(20)
   padding: rem(8)
@@ -13,6 +15,11 @@
     justify-content: space-between
 
     .queue-status
+      +ellipsis()
+      max-width: 70%
+      display: inline-block
+      vertical-align: middle
+      font-weight: bold
       .queue-length
         color: white
 
@@ -21,9 +28,9 @@
       padding: rem(6)
       text-transform: uppercase
       font-weight: normal
-      background-color: #698495
+      background-color: $bottom-area-bg-color
       &:hover, &:active, &:focus
-        background-color: lighten(#698495, 10%)
+        background-color: $sessionTypeTab-color
 
   .sessiontype-sessions
     margin-top: rem(14)
@@ -33,9 +40,16 @@
       justify-content: space-between
 
       .session-title
-        color: #d1dadf
+        color: $bottom-area-color
+        +ellipsis()
+        max-width: 75%
+        display: inline-block
+        vertical-align: middle
 
       .session-timer
+        +ellipsis()
+        display: inline-block
+        vertical-align: middle
         &.good
           color: $green
         &.bad

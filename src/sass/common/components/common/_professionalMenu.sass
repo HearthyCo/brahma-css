@@ -1,15 +1,19 @@
-$dark-bg: #1F272C
-$bottom-area-color: lighten($dark-bg, 70%)
+$profesional-menu-bg-color: $dark-bg
+$profesional-menu-color:  lighten($dark-bg, 70%)
+$bottom-area-color: $profesional-menu-color
+$bottom-area-bg-color: lighten($dark-bg, 30%)
+$button-pro-bg-color: lighten($dark-bg, 10%)
+$button-pro-bg-color-hover: $dark-bg
 
 #menu
   display: flex
   flex-direction: column
-  justify-content:center
-  background-color: $dark-bg
+  justify-content: center
+  background-color: $profesional-menu-bg-color
   color: $white
   height: 100%
-  max-width: rem(220)
-  min-height: rem(740)
+  width: rem(220)
+  min-height: rem(720)
   font-size: $font-size-s
 
 .top-area
@@ -88,19 +92,19 @@ $bottom-area-color: lighten($dark-bg, 70%)
       margin-right: rem(5)
     &.on
       &:before
-        background: darken($dark-green, 5%)
+        background: $dark-green
     &.off
       &:before
         background: $dark-red
 
 .middle-area
   flex: 1 1 auto
-  overflow-y: scroll
+  overflow-y: auto
 
 .bottom-area
   color: $bottom-area-color
   box-sizing: border-box
-  background-color: lighten($dark-bg, 35%)
+  background-color: $bottom-area-bg-color
   min-height: rem(190)
   text-align: center
   .title
@@ -126,10 +130,16 @@ $bottom-area-color: lighten($dark-bg, 70%)
   .button-pro
     padding: rem(2) auto
     width: rem(160)
-    background: $dark-bg
+    background: $button-pro-bg-color
     font-size: $font-size-l
     display: block
     margin: rem(5) auto
     border-radius: 4px
-    color: $bottom-area-color
+    color: $profesional-menu-color
     text-transform: uppercase
+    font-weight: bold
+    transition: background 0.4s
+    &:hover, &:active, &:focus
+      background: $button-pro-bg-color-hover
+      color: $profesional-menu-color
+      outline: none
