@@ -1,0 +1,34 @@
+.page-profile
+  height: 100%
+  .content
+    height: 100%
+    .intro
+      position: relative
+      h2
+        text-transform: uppercase
+      p
+        font-size: $font-size-m
+      .change-avatar
+        position: absolute
+        top: rem(10)
+        left: rem(475)
+        .avatar
+          width: rem(110)
+          height: rem(110)
+          border-radius: 50%
+          margin: auto
+          display: block
+        a
+          display: block
+          span
+            text-align: center
+          .icon
+            color: $green
+    section
+      padding: rem(20)
+      min-height: rem(160)
+      &:nth-child(even)
+        background: $lighter-gray
+
+      &:nth-child(odd)
+        background: $white
