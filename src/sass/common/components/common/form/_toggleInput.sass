@@ -13,10 +13,12 @@
   .field
     display: inline-block
     input
+      width: 130%
       font-family: "MuseoSans"
-      &[name="name"], &[name="street"], &[name="email"], &[name="university"], &[name="account"]
-        width: 200%
+      &[name="meta.address.street"], &[name="meta.cv.university"], &[name="meta.account"]
+        width: 180%
       &[type="email"]
         margin-bottom: 0
     span
       display: inline-block
+      padding: rem(5) rem(10)
