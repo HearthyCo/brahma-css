@@ -44,20 +44,44 @@ $button-pro-bg-color-hover: $dark-bg
       padding: rem(15)
       margin: auto
 
+    .userMenu-wrapper
+      display: none
+      position: fixed
+      height: 100%
+      width: 100%
+      top: 0
+      left: 0
+      opacity: 0.3
+      z-index: 1
+
     .userMenu-content
       display: none
       position: absolute
       right: 0
-      width: rem(120)
-      background-color: $dark-green
+      width: rem(140)
+      background-color: $white
       border: 1px solid $dark-green
       text-align: center
+      z-index: 10
+      li
+        padding: rem(5) 0
+        color: $dark-gray
+        font-weight: bold
+        a
+          display: block
 
-      li:hover
-        background-color: $green
+      a:hover
+        color: $green
 
-    &.is-expanded .userMenu-content
-      display: block
+    &.is-expanded
+      .userMenu-wrapper
+        display: block
+      .userMenu-content
+        display: block
+
+    .logout
+      border-top: 1px solid $light-gray
+
 
   .comp-userbrief
     padding-left: rem(5)
@@ -75,6 +99,7 @@ $button-pro-bg-color-hover: $dark-bg
       +ellipsis()
       text-transform: capitalize
       margin: rem(5)
+      color: $white
 
   .indicator
     position: absolute
