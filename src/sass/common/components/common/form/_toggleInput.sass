@@ -1,15 +1,22 @@
 .comp-toggleInput
   margin-bottom: rem(5)
+  line-height: 1.2rem
 
   .label
     display: inline-block
     label
+      display: inline-block
       text-transform: capitalize
       font-family: "MuseoSans"
-      margin-right: rem(15)
+      margin-right: rem(10)
 
   .field
     display: inline-block
     input
       font-family: "MuseoSans"
-      width: 150%
+      &[name="name"], &[name="street"], &[name="email"], &[name="university"], &[name="account"]
+        width: 200%
+      &[type="email"]
+        margin-bottom: 0
+    span
+      display: inline-block
