@@ -41,8 +41,9 @@ $button-pro-bg-color-hover: $dark-bg
     .icon
       font-size: $font-size-l
       transform: rotate(90deg)
-      padding: rem(15)
+      padding: rem(10)
       margin: auto
+      transition: transform 0.2s
 
     .userMenu-wrapper
       display: none
@@ -57,23 +58,26 @@ $button-pro-bg-color-hover: $dark-bg
     .userMenu-content
       display: none
       position: absolute
-      right: 0
-      width: rem(140)
+      left: 1px
+      width: rem(160)
       background-color: $white
-      border: 1px solid $dark-green
+      border: 1px solid $light-green
       text-align: center
       z-index: 10
+      transition: opacity 0.2s
       li
-        padding: rem(5) 0
         color: $dark-gray
         font-weight: bold
         a
           display: block
+          padding: rem(5)
 
       a:hover
         color: $green
 
     &.is-expanded
+      .icon
+        transform: rotate(-90deg)
       .userMenu-wrapper
         display: block
       .userMenu-content
