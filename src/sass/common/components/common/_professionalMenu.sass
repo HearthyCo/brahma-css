@@ -43,7 +43,7 @@ $button-pro-bg-color-hover: $dark-bg
       transform: rotate(90deg)
       padding: rem(10)
       margin: auto
-      transition: transform 0.2s
+      transition: transform 0.2s ease-in-out
 
     .userMenu-wrapper
       display: none
@@ -59,13 +59,13 @@ $button-pro-bg-color-hover: $dark-bg
     .userMenu-content
       display: none
       position: absolute
-      left: 1px
+      left: 0
+      opacity: 0
       width: rem(160)
       background-color: $white
       border: 1px solid $light-green
       text-align: center
       z-index: 10
-      transition: opacity 0.2s
       li
         color: $dark-gray
         font-weight: bold
@@ -83,10 +83,20 @@ $button-pro-bg-color-hover: $dark-bg
         display: block
       .userMenu-content
         display: block
+        +animation-duration (0.2s)
+        +animation-name (menuFromNone)
+        +animation-fill-mode (forwards)
+        +animation-timing-function (ease-in-out)
+    &.is-collapsed
+      .userMenu-content
+        display: block
+        +animation-duration (0.2s)
+        +animation-name (menuFromBlock)
+        +animation-fill-mode (forwards)
+        +animation-timing-function (ease-in-out)
 
     .logout
       border-top: 1px solid $light-gray
-
 
   .comp-userbrief
     padding-left: rem(5)
@@ -168,8 +178,39 @@ $button-pro-bg-color-hover: $dark-bg
     color: $profesional-menu-color
     text-transform: uppercase
     font-weight: bold
-    transition: background 0.4s
+    transition: background 0.4s ease-in-out
     &:hover, &:active, &:focus
       background: $button-pro-bg-color-hover
       color: $profesional-menu-color
       outline: none
+
+
+//ANIMATION
+
++keyframes (menuFromNone)
+  0%
+    display: none
+    top: rem(60)
+    opacity: 0
+  1%
+    display: block
+    top: rem(60)
+    opacity: 0
+  100%
+    display: block
+    top: rem(30)
+    opacity: 1
+
++keyframes (menuFromBlock)
+  0%
+    display: block
+    top: rem(30)
+    opacity: 1
+  99%
+    display: block
+    top: rem(60)
+    opacity: 0
+  100%
+    display: none
+    top: rem(60)
+    opacity: 0
