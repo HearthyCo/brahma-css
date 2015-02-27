@@ -19,11 +19,12 @@
         font-weight: normal
     .icon
       @extend %extra-icon
-      transition: 0.2s ease-in-out
+      transition: transform 0.2s ease-in-out
   .entry-content
     background-color: $white
     overflow: hidden
     +animation-name (none)
+    +animation-timing-function (ease-in-out)
     @extend %text
     display: none
     .title
@@ -34,18 +35,20 @@
   &.is-expanded
     .entry-content
       display: block
-      +animation-duration (0.2s)
+      +animation-duration (0.3s)
       +animation-name (FromNone)
       +animation-fill-mode (forwards)
+      +animation-timing-function (ease-in-out)
     .icon
       transform: rotate(90deg)
 
   &.is-collapsed
     .entry-content
       display: block
-      +animation-duration (0.2s)
+      +animation-duration (0.3s)
       +animation-name (FromBlock)
       +animation-fill-mode (forwards)
+      +animation-timing-function (ease-in-out)
 
   &:last-child
     .entry-button
@@ -56,21 +59,21 @@
 +keyframes (FromNone)
   0%
     display: none
-    height: 0
-  1%
+    max-height: 0
+  0.1%
     display: block
-    height: 0
+    max-height: 0
   100%
     display: block
-    height: rem(250)
+    max-height: rem(300)
 
 +keyframes (FromBlock)
   0%
     display: block
-    height: rem(250)
-  99%
+    max-height: rem(300)
+  99.9%
     display: block
-    height: 0
+    max-height: 0
   100%
     display: none
-    height: 0
+    max-height: 0
