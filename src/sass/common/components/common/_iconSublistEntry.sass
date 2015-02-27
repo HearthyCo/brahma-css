@@ -1,0 +1,75 @@
+.comp-iconsublistentry
+  margin-bottom: rem(5)
+
+  .entry-button
+    +display-flex
+    justify-content: space-between
+    color: $white
+    @extend .red-button
+    user-select: none
+    padding: rem(25) 7% rem(25) 4%
+    .label
+      h2
+        @extend %title
+        margin-bottom: 0
+        display: inline-flex
+      .icon
+        @extend %extra-title
+        display: inline-flex
+        vertical-align: sub
+    .icon-right
+      @extend %extra-icon
+      transition: transform 0.2s ease-in-out
+  .entry-content
+    background-color: $white
+    overflow: hidden
+    +animation-name (none)
+    +animation-timing-function (ease-in-out)
+    @extend %text
+    display: none
+    .title
+      margin: rem(35) rem(20)
+      strong
+        margin: 0 rem(6)
+
+  &.is-expanded
+    .entry-content
+      display: block
+      +animation-duration (0.3s)
+      +animation-name (ToBlock)
+      +animation-fill-mode (forwards)
+      +animation-timing-function (ease-in-out)
+    .icon-right
+      transform: rotate(90deg)
+
+  &.is-collapsed
+    .entry-content
+      display: block
+      +animation-duration (0.3s)
+      +animation-name (ToNone)
+      +animation-fill-mode (forwards)
+      +animation-timing-function (ease-in-out)
+
+//ANIMATION
+
++keyframes (ToBlock)
+  0%
+    display: none
+    max-height: 0
+  0.1%
+    display: block
+    max-height: 0
+  100%
+    display: block
+    max-height: rem(600)
+
++keyframes (ToNone)
+  0%
+    display: block
+    max-height: rem(600)
+  99.9%
+    display: block
+    max-height: 0
+  100%
+    display: none
+    max-height: 0
