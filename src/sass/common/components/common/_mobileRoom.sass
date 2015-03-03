@@ -1,0 +1,69 @@
+.comp-mobileRoom
+  .room-backlog
+    min-height: rem(400)
+    padding-bottom: 130px
+  .room-footer
+    @extend %container
+    display: flex
+    padding: rem(25)
+    background-color: $lighter-gray
+    position: fixed
+    bottom: 0
+    right: 0
+    left: 0
+    z-index: 10
+    .room-input
+      @extend %text
+      flex: 1 1
+      transition: box-shadow 0.5s
+      box-shadow: inset transparent 0px 0px 0px 2px
+      border-radius: 0
+      background-color: $white
+      border: 0
+      vertical-align: top
+      font-family: "MuseoSans"
+      padding: rem(20)
+      height: rem(55)
+      +media($widescreen)
+        height: rem(85)
+      &:active, &:focus
+        outline: none
+        box-shadow: inset $light-gray 0px 0px 0px 2px
+    button
+      letter-spacing: -0.06rem
+    .room-send
+      @extend .red-button
+      @extend %text
+      flex: 0 0 rem(100)
+      text-transform: uppercase
+      border-radius: 0
+      border: none
+      height: rem(55)
+      padding: rem(10)
+      vertical-align: top
+      font-family: "MuseoSans"
+      display: none
+      +media($widescreen)
+        height: rem(85)
+        flex-basis: rem(200)
+    .upload
+      flex: 0 0 rem(100)
+      +color-hover($medium-gray)
+      @extend %extra-title
+      background: transparent
+      border-radius: 0
+      border: none
+      height: rem(55)
+      padding: rem(10) rem(0)
+      vertical-align: top
+      font-family: "MuseoSans"
+      font-weight: 100
+      text-transform: uppercase
+      +media($widescreen)
+        height: rem(85)
+        flex-basis: rem(200)
+    &.has-text
+      .room-send
+        display: block
+      .upload
+        display: none

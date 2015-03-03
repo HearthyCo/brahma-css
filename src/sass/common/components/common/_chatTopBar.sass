@@ -1,0 +1,52 @@
+.comp-chatTopBar
+  background-color: $red
+  height: rem(60)
+  width: 100%
+  +fixed()
+  @extend %container
+  +media($widescreen)
+    height: rem(75)
+
+  .chatTopBar-wrapper
+    box-sizing: border-box
+    max-width: rem(1224)
+    color: $white
+    height: 100%
+    display: flex
+
+    .menuBar
+      display: flex
+      align-self: center
+      height: 100%
+      margin: rem(10)
+      min-width: rem(40)
+      a
+        align-self: center
+        .icon
+          display: inline-block
+          color: $white
+          @extend %extra-title
+    .bar-profile
+      display: flex
+      line-height: 1.35rem
+      .avatar
+        min-width: rem(55)
+        height: rem(55)
+        width: rem(55)
+        border-radius: 50%
+        border: 3px solid $white
+        align-self: center
+        flex-shrink: 0
+        margin-right: rem(10)
+      .details
+        align-self: center
+        flex-shrink: 1
+        .name
+          display: block
+          @extend %text
+          font-weight: bold
+          +ellipsis()
+        a
+          display: block
+          color: $white
+          text-decoration: underline

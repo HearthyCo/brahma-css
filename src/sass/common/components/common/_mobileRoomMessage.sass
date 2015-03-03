@@ -1,0 +1,45 @@
+.comp-mobileroommessage
+
+  .message-body
+    position: relative
+    margin: rem(15) rem(20)
+    padding: rem(17)
+    background-color: $white
+    width: auto
+    max-width: 65%
+    display: inline-block
+    border-radius: 6px
+    z-index: 10
+    text-align: left
+    min-width: rem(70)
+    word-break: break-all
+    a
+      color: $red
+      font-weight: bold
+      cursor: pointer
+      &:hover
+        text-decoration: underline
+    &:before
+      position: absolute
+      bottom: -20px
+      content: ''
+      width: 0
+      height: 0
+      z-index: 1
+
+  &.own
+    text-align: right
+    .message-body
+      &:before
+        right: rem(20)
+        border-top: rem(25) solid transparent
+        border-bottom: rem(20) solid transparent
+        border-right: rem(30) solid $white
+
+  &.remote
+    text-align: left
+    .message-body
+      &:before
+        border-top: rem(25) solid transparent
+        border-bottom: rem(20) solid transparent
+        border-left: rem(30) solid $white
