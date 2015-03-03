@@ -32,8 +32,6 @@
     font-size: $font-size-l
 
 
-
-
 //BREADCRUMB-ARROW
 
 $breadcrumb-bg: $lighter-gray
@@ -57,3 +55,11 @@ $breadcrumb-bg: $lighter-gray
     background-color: $breadcrumb-bg
     transform: rotate(45deg) skew(15deg, 15deg)
     border-radius: rem(4)
+
+%container
+  max-width: 68rem
+  margin-left: auto
+  margin-right: auto
+  +media($widescreen)
+    max-width: rem(1500)
+
