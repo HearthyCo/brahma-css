@@ -63,18 +63,24 @@
       text-transform: uppercase
       border: 1px solid $green
       border-radius: 0 0 4px 0
+      display: none
     .upload
       flex: 0 0 rem(60)
-      +color-hover($medium-gray)
+      +bg-color-hover($medium-gray)
       @extend %extra-title
-      background: transparent
       border-radius: 0
       border: none
-      height: rem(55)
+      height: rem(60)
       padding: 0
       vertical-align: top
       font-family: "MuseoSans"
       font-weight: 100
+      border-radius: 0 0 4px 0
+    &.has-text
+      .room-send
+        display: block
+      .upload
+        display: none
 
   .end-session
     flex: 0 0 auto

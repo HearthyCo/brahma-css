@@ -1,29 +1,41 @@
 $entry-button-bg-color: lighten($dark-bg, 30%)
 
 .comp-sidebarUserProfile
+
   .sideBar-section
     padding: rem(10)
     background-color: $lighter-gray
     text-transform: uppercase
     text-align: center
-  .comp-userbrief
+  .userbrief
     display: flex
     align-items: center
+    justify-content: flex-start
+    padding: rem(20)
     .avatar
-      flex: 1 0 auto
+      flex: 0 0 auto
       min-width: 50px
       min-height: 50px
       height: 50px
       border: none
       width: 50px
-    .name
-      flex: 0 1 auto
+      border-radius: 50%
+    .profile
+      flex: 1 1 auto
       margin: rem(5)
-      font-size: $font-size-m
-      +ellipsis()
-      text-transform: capitalize
-  .view-profile
+      line-height: 1.2rem
+      .name
+        font-size: $font-size-m
+        text-transform: capitalize
+        +ellipsis()
+        font-weight: bold
+      .view-profile
+        +color-hover($green)
+        text-decoration: underline
+        font-size: $font-size-s
+        font-weight: bold
   .comp-iconsublistentry
+    border: 1px solid $gray
     .entry-button
       padding: rem(15)
       +bg-color-hover($entry-button-bg-color)
@@ -39,6 +51,11 @@ $entry-button-bg-color: lighten($dark-bg, 30%)
       .comp-historiesentry
         font-size: $font-size-m
         .label
+          border-bottom: 1px solid $gray
+          border-top: 1px solid $gray
           font-size: $font-size-m
-        .view-more
-          text-align: center
+      .view-more
+        text-align: center
+        padding: rem(10)
+        display: inline-block
+        font-weight: bold

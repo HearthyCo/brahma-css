@@ -4,7 +4,7 @@
   align-items: stretch
 
   .toogle
-    +position (absolute, rem(10) rem(15) null null)
+    +position (fixed, rem(10) rem(15) null null)
     span
       width: rem(40)
       height: rem(40)
@@ -32,13 +32,14 @@
     display: none
     width: rem(350)
     flex: 0 0 auto
-    overflow: hidden
+    overflow-y: auto
     +animation-name (none)
     .side-header
       width: rem(350)
       border-bottom: rem(1) solid $light-gray
       background: $lighter-gray
       height: rem(60)
+
       .icon
         opacity: 0
         +position (relative, null null null null)
@@ -67,7 +68,6 @@
 
     .side-content
       width: rem(350)
-      padding: rem(10)
 
   &.is-expanded
     .side-wrapper
