@@ -9,14 +9,13 @@
     user-select: none
     padding: rem(25) 7% rem(25) 4%
     .label
+      +display-flex
       h2
         @extend %title
         margin-bottom: 0
-        display: inline-flex
       .icon
-        @extend %extra-title
-        display: inline-flex
-        vertical-align: sub
+        @extend %extra-icon
+        margin-right: rem(5)
     .icon-right
       @extend %extra-icon
       transition: transform 0.2s ease-in-out
