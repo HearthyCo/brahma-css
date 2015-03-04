@@ -1,11 +1,44 @@
+$entry-button-bg-color: lighten($dark-bg, 30%)
 
 .comp-sidebarUserProfile
-  .comp-
-  .avatar
-  .name
+  .sideBar-section
+    padding: rem(10)
+    background-color: $lighter-gray
+    text-transform: uppercase
+    text-align: center
+  .comp-userbrief
+    display: flex
+    align-items: center
+    .avatar
+      flex: 1 0 auto
+      min-width: 50px
+      min-height: 50px
+      height: 50px
+      border: none
+      width: 50px
+    .name
+      flex: 0 1 auto
+      margin: rem(5)
+      font-size: $font-size-m
+      +ellipsis()
+      text-transform: capitalize
   .view-profile
   .comp-iconsublistentry
     .entry-button
+      padding: rem(15)
+      +bg-color-hover($entry-button-bg-color)
+      .label
+        h2
+          font-size: $font-size-m
+        .icon
+          font-size: $font-size-xxl
+      .icon
+        font-size: $font-size-xl
     .entry-content
+      font-size: $font-size-m
       .comp-historiesentry
+        font-size: $font-size-m
+        .label
+          font-size: $font-size-m
         .view-more
+          text-align: center
