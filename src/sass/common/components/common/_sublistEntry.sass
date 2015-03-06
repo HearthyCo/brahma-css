@@ -17,7 +17,7 @@
         margin-bottom: 0
         text-transform: lowercase
         font-weight: normal
-    .icon
+    .icon-right
       @extend %extra-icon
       transition: transform 0.2s ease-in-out
   .entry-content
@@ -39,7 +39,7 @@
       +animation-name (FromNone)
       +animation-fill-mode (forwards)
       +animation-timing-function (ease-in-out)
-    .icon
+    .icon-right
       transform: rotate(90deg)
 
   &.is-collapsed
@@ -50,9 +50,6 @@
       +animation-fill-mode (forwards)
       +animation-timing-function (ease-in-out)
 
-  &:last-child
-    .entry-button
-      @extend .gray-button
 
 //ANIMATION
 
