@@ -29,13 +29,18 @@
       &.off
         &:before
           background: $light-gray
-
-  .room-backlog
+  .room-wrapper
     background-color: $lighter-gray
     border-radius: 6px 6px 0 0
     flex: 1 1 auto
-    padding: rem(20)
+    display: flex
+    flex-direction: column-reverse
+
+  .room-backlog
+    display: block
     overflow-y: auto
+    height: auto
+    padding: rem(20)
 
   .room-footer
     flex: 0 0 auto

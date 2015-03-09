@@ -1,7 +1,18 @@
 .comp-mobileRoom
+  position: absolute
+  top: rem(60)
+  bottom: rem(105)
+  right: 0
+  left: 0
+
+  .room-wrapper
+    display: flex
+    flex-direction: column-reverse
+    height: 100%
   .room-backlog
-    min-height: rem(400)
-    padding-bottom: 130px
+    display: block
+    overflow-y: auto
+
   .room-footer
     @extend %container
     display: flex
