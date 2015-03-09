@@ -1,0 +1,22 @@
+.tasksPage
+
+  .main-section
+    background-color: $lighter-gray
+    .page-tasks
+      background-color: $white
+      .calendar
+        margin: auto
+        display: block
+      .entry-button
+        +bg-color-hover ($lighter-gray)
+        color: $dark-gray
+        h2
+          font-weight: 400
+          margin-left: rem(10)
+        .icon
+          @extend %extra-title
+        .icon-cross
+          color: $red
+        .icon-check
+          color: $green
+
