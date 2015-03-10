@@ -1,0 +1,41 @@
+.comp-trigger
+  display: inline-block
+  vertical-align: middle
+  margin: auto rem(15)
+  .field
+    height: rem(25)
+    width: rem(50)
+    border-radius: rem(25)
+    background-color: $light-gray
+    position: relative
+  label
+    height: 100%
+    width: 100%
+    display: inline-block
+    cursor: pointer
+    input[type="checkbox"]
+      display: none
+      + span
+        display: inline-block
+        height: rem(25)
+        width: rem(25)
+        border-radius: 50%
+        background-color: $red
+        position: absolute
+        left: rem(25)
+        color: $white
+        text-align: center
+        +transition-property(left, background-color)
+        +transition-duration(0.15s)
+        +transition-timing-function(ease-in-out)
+        &:after
+          content: 'OFF'
+          font-size: $font-size-xs
+          vertical-align: middle
+
+      &:checked
+        + span
+          background-color: $green
+          left: 0
+          &:after
+            content: 'ON'
