@@ -11,7 +11,6 @@
     .label
       flex: 1 1 auto
       display: flex
-      align-items: center
       cursor: pointer
       h2
         +ellipsis()
@@ -19,11 +18,11 @@
         margin-bottom: 0
         font-weight: 400
       .icon
-        @extend %extra-icon
+        @extend %extra-title
         margin-right: rem(5)
         flex: 0 0 auto
         &:before
-          vertical-align: top
+          vertical-align: middle
         &.icon-cross
           color: $red
         &.icon-check
