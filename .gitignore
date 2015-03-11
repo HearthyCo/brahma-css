@@ -57,9 +57,6 @@ bower_components/
 ## Vagrant
 .vagrant
 
-## Gems
-Gemfile.lock
-
 ### SUBPROJECT SPECIFIC IGNORE
 
 install.bash
