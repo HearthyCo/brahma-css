@@ -1,102 +1,71 @@
+$header-height: 60px
 
-.vertical-centre ($height)
-  height:$height
-  line-height:$height !important
-  display:inline-block
-  vertical-align:middle
+.comp-calendar
+  margin: rem(10) auto
+  display: block
+  @extend %border-box
+  @extend %title
+  background: $white
+  width: 350px
+  color: $dark-gray
 
+  .header
+    width: 100%
+    height: $header-height
+    +display-flex
 
-.border-box
-  box-sizing:border-box
-  -moz-box-sizing:border-box
+    .icon
+      @extend %title
+      @extend %border-box
+      padding: 0 10px
+      cursor: pointer
 
+    .month
+      font-weight: bold
+      text-transform: uppercase
+      @extend %border-box
+      text-align: center
 
-$border-colour:#CCC
-.calendar
-  float:left
-  display:block
-  .border-box
-  background:white
-  width:300px
-  border:solid 1px $border-colour
-  margin-bottom:10px
+  .week
+    width: 100%
 
-  $secondary-colour:#2875C7
-  $spacing:10px
-  $icon-width:40px
-  $header-height:40px
-
-  >div.header
-    float:left
-    width:100%
-    background:$secondary-colour
-    height:$header-height
-    color:white
-
-    >*
-      .vertical-centre($header-height)
-
-    >.icon
-      float:left
-      width:$icon-width
-      font-size:1.125em
-      font-weight:bold
-      position:relative
-      .border-box
-      padding:0 $spacing
-      cursor:pointer
-
-    >.fa-angle-left
-      text-align:left
-
-    >.fa-angle-right
-      text-align:right
-      margin-left:$icon-width*-1
-
-    >span
-      float:left
-      width:100%
-      font-weight:bold
-      text-transform:uppercase
-      .border-box
-      padding-left:$icon-width+$spacing
-      margin-left:$icon-width*-1
-      text-align:center
-      padding-right:$icon-width
-      color:inherit
-  >div.week
-    float:left
-    width:100%
-    border-top:solid 1px $border-colour
-
-    &:first-child
-        border-top:none
-
-    >span.day
-      float:left
-      width:100%/7
-      .border-box
-      border-left:solid 1px $border-colour
-      font-size:0.75em
-      text-align:center
-      .vertical-centre(30px)
-      background:white
-      cursor:pointer
-      color:black
-
-      &:first-child
-        border-left:none;
+    .day
+      width: (100% / 7)
+      @extend %border-box
+      font-size: 0.7em
+      text-align: center
+      +vertical-centre($header-height - 15px)
+      background: $white
+      cursor: pointer
+      color: $dark-gray
 
       &.today
-        background:#E3F2FF
+        @extend %border-box
+        span
+          background: $light-green
+          padding: 5px
+
 
       &.different-month
-        color:#C0C0C0
+        color: $light-gray
 
       &.selected
-        background:$secondary-colour
-        color:white
+        @extend %border-box
+        span
+          padding: 5px
+          background: $green
+          color: $white
+          border-radius: 50%
+          font-weight: bold
 
-  &.names>span
-    color:$secondary-colour
-    font-weight:bold
+      &.reserved
+        @extend %border-box
+        span
+          padding: 5px
+          font-weight: bold
+          border-bottom: 3px solid $green
+
+    &.names
+      span
+        font-weight: bold
+        cursor: text

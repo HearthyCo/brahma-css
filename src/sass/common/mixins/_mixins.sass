@@ -53,3 +53,9 @@
   transition: color 0.4s
   &:hover, &:active, &:focus
     color: shade($baseColor, 15%)
+
+@mixin vertical-centre($height)
+  height: $height
+  line-height: $height !important
+  display: inline-block
+  vertical-align: middle
