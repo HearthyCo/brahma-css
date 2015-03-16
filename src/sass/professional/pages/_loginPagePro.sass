@@ -1,0 +1,39 @@
+.professional
+  &.externalSection
+    #container
+      background-color: $lighter-gray
+.topBarPro
+  height: rem(150)
+  width: 100%
+  background-color: $bottom-area-bg-color
+  +fixed()
+  +display-flex()
+  a
+    height: rem(60)
+    width: rem(200)
+    display: block
+    margin: auto
+    .logo
+      background-image: url(/res/images/logo.png)
+      background-size: contain
+      background-position: center
+      background-repeat: no-repeat
+      height: 100%
+      width: 100%
+
+.page-loginPagePro
+  max-width: rem(600)
+  margin: rem(200) auto 0
+  h1
+    @extend %extra-title
+    text-align: center
+  p
+    @extend %text
+    text-align: center
+
+  textarea, input[type="email"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="url"], input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="time"], input[type="week"]
+    &.field
+      background-color: $white
+  button
+    @extend .green-button
+    border-radius: 5px
