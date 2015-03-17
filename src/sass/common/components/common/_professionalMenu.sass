@@ -116,26 +116,19 @@ $button-pro-bg-color-hover: $dark-bg
       margin: rem(5)
       color: $white
 
-  .indicator
+  .indicator-position
     position: absolute
     bottom: rem(5)
     left: rem(5)
-
-    &:before
-      content: ''
-      display: inline-block
-      border: 2px solid white
-      height: rem(15)
-      width: rem(15)
-      vertical-align: middle
-      border-radius: 50%
-      margin-right: rem(5)
-    &.on
-      &:before
-        background: $dark-green
-    &.off
-      &:before
-        background: $dark-red
+    .comp-indicator
+      >div
+        border: 2px solid white
+        height: rem(15)
+        width: rem(15)
+        &.on
+          background: $dark-green
+        &.off
+          background: $dark-red
 
 .middle-area
   flex: 1 1 auto
