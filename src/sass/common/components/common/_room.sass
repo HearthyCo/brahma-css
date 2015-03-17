@@ -2,33 +2,8 @@
   height: 100%
   display: flex
   flex-direction: column
-  min-height: rem(700)
-  .session-title
-    height: rem(55)
-    flex: 0 0 auto
-    .session-client
-      padding: rem(7) rem(20)
-      font-size: $font-size-l
-      vertical-align: middle
-      display: inline-block
-      +ellipsis()
-      max-width: 85%
+  flex: 1 1 auto
 
-      &:before
-        content: ''
-        display: inline-block
-        border: 2px solid white
-        height: rem(20)
-        width: rem(20)
-        vertical-align: middle
-        border-radius: 50%
-        margin-right: rem(5)
-      &.on
-        &:before
-          background: $dark-green
-      &.off
-        &:before
-          background: $light-gray
   .room-wrapper
     background-color: $lighter-gray
     border-radius: 6px 6px 0 0
@@ -91,6 +66,7 @@
     flex: 0 0 auto
     height: 120px
     position: relative
+    background-color: $white
     button
       background-color: $red
       color: $white

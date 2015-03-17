@@ -4,3 +4,22 @@
   .content
     padding: rem(10)
     height: 100%
+    display: flex
+    flex-direction: column
+
+  .session-title
+    height: rem(55)
+    flex: 0 0 auto
+    .session-client
+      padding: rem(7) rem(20)
+      font-size: $font-size-l
+      vertical-align: middle
+      display: inline-block
+      +ellipsis()
+      max-width: 85%
+
+      .comp-indicator
+        vertical-align: baseline
+        >div
+          height: rem(15)
+          width: rem(15)
