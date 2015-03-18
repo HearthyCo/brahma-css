@@ -1,31 +1,57 @@
 .page-room
   #room-video
+    background: $light-gray
+    height: rem(420)
+    width: 100%
     flex: 0 0 auto
     position: relative
-    >div
-      max-height: rem(720)
-      max-width: rem(1300)
-      margin: 0 auto rem(10)
+    margin: 0 0 rem(10) 0
+    max-height: 60%
+    min-width: rem(400)
+
     .video-cp
       position: absolute
       bottom: 0
       width: 100%
       background: black
       color: white
-      height: 50px
+      height: rem(50)
       display: flex
       justify-content: space-between
       align-items: center
-      padding: 0 rem(30)
-      opacity: .7
+      padding: rem(15) rem(30)
+      opacity: .8
+      z-index: 3
       .icon
         font-size: $font-size-xl
+        text-align: left
+      .icon-camera
+        margin-right: rem(20)
+      .settings
+        display: flex
+        align-items: center
+    .volume
+      position: relative
+      height: rem(50)
+      width: rem(50)
+      .icon
+        cursor: pointer
+        position: absolute
+        line-height: rem(50)
+        overflow: hidden
+        font-size: $font-size-xxl
+        &.on
+          color: $white
+        &.off
+          color: $dark-gray
     .OT_publisher
-      z-index: -1
+      z-index: 2
       position: absolute
       margin: auto
       top: rem(10)
       left: rem(10)
+      .OT_widget-container
+        background-color: transparent
     .OT_subscriber
-      z-index: -2
-      min-height: rem(420)
+      z-index: 1
+      min-height: 100%
