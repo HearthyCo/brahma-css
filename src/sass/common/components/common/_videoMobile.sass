@@ -1,0 +1,53 @@
+.page-sessionchat
+  #room-video
+    width: 100%
+    position: relative
+    max-height: 100%
+    .icon
+      &:before
+        text-shadow: $shadow
+    a
+      .icon
+        &:before
+          color: $white
+
+  .icon-toggle-camera
+    font-size: $font-size-xxxl
+    position: absolute
+    top: rem(30)
+    right: rem(10)
+    color: $red
+    z-index: 4
+    cursor: pointer
+  .elements
+    font-size: $font-size-xxxl
+    z-index: 4
+    position: absolute
+    bottom: rem(20)
+    width: auto
+    color: $white
+    text-align: center
+    left: 50%
+    margin-left: rem(-105)
+    .icon-chat
+      cursor: pointer
+    .icon-biometrics
+      cursor: pointer
+    .icon-reel
+      cursor: pointer
+
+  .OT_publisher
+    z-index: 2
+    position: absolute
+    margin: auto
+    top: rem(-70)
+    left: rem(10)
+    .OT_widget-container
+      background-color: transparent
+  .OT_subscriber
+    z-index: 1
+    position: fixed
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
