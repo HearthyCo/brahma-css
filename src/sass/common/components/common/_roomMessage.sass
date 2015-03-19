@@ -2,7 +2,7 @@
   display: flex
   margin-top: rem(10)
   &:first-child
-    margin-top: rem(0)
+    margin-top: 0
 
   .message-avatar
     flex: 0 0 auto
@@ -15,9 +15,10 @@
     flex: 1 1 auto
     line-height: 1.4rem
     a
-      color: $red
+      color: $green
       font-weight: bold
       cursor: pointer
+      text-decoration: underline
       &:hover
         text-decoration: underline
     .message-header
@@ -34,6 +35,11 @@
       font-weight: bold
 
     canvas
-      padding-left: 15px
-      border-left: 4px solid #ccc
-      margin-left: 5px
+      padding-left: rem(15)
+      border-left: 4px solid $light-gray
+      margin-left: rem(5)
+  .message-body
+    .sent-img
+      margin-left: rem(15)
+      span
+        font-size: $font-size-s
