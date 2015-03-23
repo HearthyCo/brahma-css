@@ -138,35 +138,47 @@ $button-pro-bg-color-hover: $dark-bg
   color: $bottom-area-color
   box-sizing: border-box
   background-color: $bottom-area-bg-color
-  min-height: rem(190)
+  min-height: rem(110)
   text-align: center
   .title
-    padding: rem(4)
+    padding: rem(1)
     font-size: $font-size-m
     text-transform: uppercase
     border-bottom: 1px solid $bottom-area-color
-  .date
-    .day
-      display: block
-      font-size: $font-size-xxl
-      font-weight: bold
-    .month
-      font-size: $font-size-m
-      margin-top: rem(-15)
-      display: block
-  .schedule
-    margin-top: rem(5)
-    .icon
-      font-size: $font-size-l
-    .time
-      margin-right: rem(5)
+
+  .date-time
+    display: flex
+    align-items: center
+    width: rem(200)
+    margin: auto
+    .date
+      flex: 1 1 rem(90)
+      .day
+        font-size: $font-size-l
+        font-weight: bold
+        display: block
+
+      .month
+        font-size: $font-size-m
+        margin-top: rem(-15)
+        display: block
+
+    .schedule
+      flex: 1 1 rem(110)
+      margin-left: rem(10)
+      border-left: 1px solid $bottom-area-color
+      .icon
+        font-size: $font-size-m
+      .time
+        margin-right: rem(5)
+
   .button-pro
     padding: rem(2) auto
-    width: rem(160)
+    width: rem(200)
     background: $button-pro-bg-color
-    font-size: $font-size-l
+    font-size: $font-size-m
     display: block
-    margin: rem(5) auto
+    margin: 0 auto
     border-radius: 4px
     color: $profesional-menu-color
     text-transform: uppercase

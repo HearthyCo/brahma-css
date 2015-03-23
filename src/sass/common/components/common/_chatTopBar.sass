@@ -17,15 +17,16 @@
     .menuBar
       display: flex
       align-self: center
+      align-items: center
       height: 100%
       margin: rem(10)
       min-width: rem(40)
-      a
-        align-self: center
-        .icon
-          display: inline-block
-          color: $white
-          @extend %extra-title
+
+      .icon
+        display: inline-block
+        color: $white
+        @extend %extra-title
+        cursor: pointer
     .bar-profile
       display: flex
       line-height: 1.35rem
