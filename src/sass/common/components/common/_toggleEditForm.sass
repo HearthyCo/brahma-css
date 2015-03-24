@@ -21,3 +21,13 @@
     .header
       .toggleButton
         @extend .red-button
+      .cancel
+        cursor: pointer
+        +color-hover($red)
+        margin-left: rem(25)
+        display: inline-block
+        span
+          vertical-align: middle
+      .icon-cross
+        font-size: $font-size-m
+
