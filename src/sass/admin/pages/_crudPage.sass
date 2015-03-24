@@ -1,0 +1,34 @@
+.crudPage
+  #main
+    background-color: $lighter-gray
+.page-crud
+  +span-columns(10)
+  +one-column()
+  table
+    padding: rem(5)
+  th
+    text-transform: uppercase
+    border-bottom: 2px solid $white
+  td
+    border-bottom: 1px solid $white
+
+.crudEditPage
+  #main
+    background-color: $lighter-gray
+    input
+      width: 200%
+    .comp-toggleSelect, .comp-toggleBoolean
+      margin-bottom: 0
+      line-height: 1rem
+      height: rem(40)
+  .controls
+    position: absolute
+    right: rem(15)
+    top: 45%
+    .button
+      margin-bottom: rem(5)
+      width: rem(150)
+      min-width: rem(50)
+      padding: rem(5)
+      span
+        vertical-align: middle

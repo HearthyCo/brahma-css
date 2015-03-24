@@ -1,0 +1,25 @@
+#container
+  position: fixed
+  top: 0px
+  left: 0px
+  right: 0px
+  bottom: 0px
+  display: flex
+  min-width: rem(768)
+
+  #menu
+
+    flex: 0 0 auto
+    .middle-area
+      padding: rem(10)
+    a
+      font-size: $font-size-m
+      font-weight: bold
+      text-transform: uppercase
+      +color-hover($white)
+
+  #main
+    flex: 1 1 auto
+    padding: rem(25)
+    overflow-y: auto
+    color: $dark-gray

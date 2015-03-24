@@ -1,0 +1,47 @@
+$admin-menu-bg-color: lighten($dark-bg, 30%)
+
+.admin
+  #menu
+    display: flex
+    flex-direction: column
+    justify-content: center
+    background-color: $admin-menu-bg-color
+    color: $white
+    height: 100%
+    width: rem(250)
+
+  .top-area
+    flex: 0 0 auto
+    position: relative
+
+    .logo
+      +bg-color-hover($red)
+      background-image: url(/res/images/logo.png)
+      background-size: contain
+      background-repeat: no-repeat
+      background-position: center
+      background-origin: content-box
+      height: rem(60)
+      padding: rem(10)
+
+
+    .comp-userbrief
+      padding-left: rem(5)
+      padding-right: rem(5)
+
+      .avatar
+        border-color: $dark-red
+        width: 5.5rem
+        min-width: 5.5rem
+        min-height: 5.5rem
+        height: 5.5rem
+
+      .name
+        font-size: $font-size-m
+        +ellipsis()
+        text-transform: capitalize
+        margin: rem(5)
+        color: $white
+
+  .middle-area
+    flex: 1 1 auto

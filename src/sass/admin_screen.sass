@@ -1,0 +1,41 @@
+/* Loading Bourbon, Neat and Bitters. */
+//--- Bourbon
+@import "common/bourbon/bourbon"
+
+// To use Neat functions in Bitters: @import "base/grid-settings"; before Neat
+//   and import the rest of bitters after.
+//--- Bitters for Neat
+@import "common/base/grid-settings"
+
+//--- Icons & Fonts
+@import "common/assets/**/*"
+
+//--- Brahma variables
+@import "common/variables"
+//--- Professional variables
+@import "admin/variables"
+
+// To use Bitters and Neat without Ruby on Rails, change the import for neat-helpers
+//   inside _grid-settings.scss to "neat-helpers".
+//--- Neat
+@import "common/neat/neat"
+
+//--- Bitters
+@import "common/base/base"
+
+//--- Placeholders
+@import "common/placeholders"
+
+//--- Mixins
+@import "common/mixins/**/*"
+
+//--- Components
+@import "common/components/**/*"
+
+//--- Pages
+@import "admin/pages/**/*"
+
+//--- Brahma base
+@import "common/base"
+//--- Professional base
+@import "admin/base"
