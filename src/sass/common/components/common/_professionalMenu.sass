@@ -4,201 +4,201 @@ $bottom-area-color: $profesional-menu-color
 $bottom-area-bg-color: lighten($dark-bg, 30%)
 $button-pro-bg-color: lighten($dark-bg, 10%)
 $button-pro-bg-color-hover: $dark-bg
-
-#menu
-  display: flex
-  flex-direction: column
-  justify-content: center
-  background-color: $profesional-menu-bg-color
-  color: $white
-  height: 100%
-  width: rem(250)
-  min-height: rem(720)
-  font-size: $font-size-s
-
-.top-area
-  background-color: $green
-  flex: 0 0 auto
-  position: relative
-
-  .logo
-    background-color: $dark-green
-    background-image: url(/res/images/logo.png)
-    background-size: contain
-    background-repeat: no-repeat
-    background-position: center
-    background-origin: content-box
-    height: rem(60)
-    padding: rem(10)
-
-  .userMenu
-    float: right
-    position: absolute
-    right: rem(5)
-    top: rem(65)
-    cursor: pointer
-
-    .icon
-      font-size: $font-size-l
-      transform: rotate(90deg)
-      padding: rem(10)
-      margin: auto
-      transition: transform 0.2s ease-in-out
-
-    .userMenu-wrapper
-      display: none
-      position: fixed
-      height: 100%
-      width: 100%
-      top: 0
-      left: 0
-      opacity: 0.3
-      z-index: 1
-      cursor: default
-
-    .userMenu-content
-      display: none
-      position: absolute
-      left: 0
-      opacity: 0
-      width: rem(200)
-      background-color: $white
-      border: 1px solid $light-green
-      text-align: center
-      z-index: 10
-      li
-        color: $dark-gray
-        font-weight: bold
-        a
-          display: block
-          padding: rem(5)
-
-      a:hover
-        color: $green
-
-    &.is-expanded
-      .icon
-        transform: rotate(-90deg)
-      .userMenu-wrapper
-        display: block
-      .userMenu-content
-        display: block
-        +animation-duration (0.2s)
-        +animation-name (menuFromNone)
-        +animation-fill-mode (forwards)
-        +animation-timing-function (ease-in-out)
-    &.is-collapsed
-      .userMenu-content
-        display: block
-        +animation-duration (0.2s)
-        +animation-name (menuFromBlock)
-        +animation-fill-mode (forwards)
-        +animation-timing-function (ease-in-out)
-
-    .logout
-      border-top: 1px solid $light-gray
-
-  .comp-userbrief
-    padding-left: rem(5)
-    padding-right: rem(5)
-
-    .avatar
-      border-color: $dark-green
-      width: 5.5rem
-      min-width: 5.5rem
-      min-height: 5.5rem
-      height: 5.5rem
-
-    .name
-      font-size: $font-size-m
-      +ellipsis()
-      text-transform: capitalize
-      margin: rem(5)
-      color: $white
-
-  .indicator-position
-    position: absolute
-    bottom: rem(5)
-    left: rem(5)
-    .comp-indicator
-      >div
-        border: 2px solid white
-        height: rem(15)
-        width: rem(15)
-        &.on
-          background: $dark-green
-        &.off
-          background: $dark-red
-
-.middle-area
-  flex: 1 1 auto
-  overflow-y: auto
-
-.bottom-area
-  color: $bottom-area-color
-  box-sizing: border-box
-  background-color: $bottom-area-bg-color
-  min-height: rem(110)
-  text-align: center
-  .title
-    padding: rem(1)
-    font-size: $font-size-m
-    text-transform: uppercase
-    border-bottom: 1px solid $bottom-area-color
-
-  .date-time
+.professional
+  #menu
     display: flex
-    align-items: center
-    width: rem(200)
-    margin: auto
-    .date
-      flex: 1 1 rem(90)
-      .day
-        font-size: $font-size-l
-        font-weight: bold
-        display: block
+    flex-direction: column
+    justify-content: center
+    background-color: $profesional-menu-bg-color
+    color: $white
+    height: 100%
+    width: rem(250)
+    min-height: rem(720)
+    font-size: $font-size-s
 
-      .month
-        font-size: $font-size-m
-        margin-top: rem(-15)
-        display: block
+  .top-area
+    background-color: $green
+    flex: 0 0 auto
+    position: relative
 
-    .schedule
-      flex: 1 1 rem(110)
-      margin-left: rem(10)
-      border-left: 1px solid $bottom-area-color
+    .logo
+      background-color: $dark-green
+      background-image: url(/res/images/logo.png)
+      background-size: contain
+      background-repeat: no-repeat
+      background-position: center
+      background-origin: content-box
+      height: rem(60)
+      padding: rem(10)
+
+    .userMenu
+      float: right
+      position: absolute
+      right: rem(5)
+      top: rem(65)
+      cursor: pointer
+
       .icon
+        font-size: $font-size-l
+        transform: rotate(90deg)
+        padding: rem(10)
+        margin: auto
+        transition: transform 0.2s ease-in-out
+
+      .userMenu-wrapper
+        display: none
+        position: fixed
+        height: 100%
+        width: 100%
+        top: 0
+        left: 0
+        opacity: 0.3
+        z-index: 1
+        cursor: default
+
+      .userMenu-content
+        display: none
+        position: absolute
+        left: 0
+        opacity: 0
+        width: rem(200)
+        background-color: $white
+        border: 1px solid $light-green
+        text-align: center
+        z-index: 10
+        li
+          color: $dark-gray
+          font-weight: bold
+          a
+            display: block
+            padding: rem(5)
+
+        a:hover
+          color: $green
+
+      &.is-expanded
+        .icon
+          transform: rotate(-90deg)
+        .userMenu-wrapper
+          display: block
+        .userMenu-content
+          display: block
+          +animation-duration (0.2s)
+          +animation-name (menuFromNone)
+          +animation-fill-mode (forwards)
+          +animation-timing-function (ease-in-out)
+      &.is-collapsed
+        .userMenu-content
+          display: block
+          +animation-duration (0.2s)
+          +animation-name (menuFromBlock)
+          +animation-fill-mode (forwards)
+          +animation-timing-function (ease-in-out)
+
+      .logout
+        border-top: 1px solid $light-gray
+
+    .comp-userbrief
+      padding-left: rem(5)
+      padding-right: rem(5)
+
+      .avatar
+        border-color: $dark-green
+        width: 5.5rem
+        min-width: 5.5rem
+        min-height: 5.5rem
+        height: 5.5rem
+
+      .name
         font-size: $font-size-m
-      .time
-        margin-right: rem(5)
+        +ellipsis()
+        text-transform: capitalize
+        margin: rem(5)
+        color: $white
 
-  .button-pro
-    padding: rem(2) auto
-    width: rem(200)
-    background: $button-pro-bg-color
-    font-size: $font-size-m
-    display: block
-    margin: 0 auto
-    border-radius: 4px
-    color: $profesional-menu-color
-    text-transform: uppercase
-    font-weight: bold
-    transition: background 0.4s ease-in-out
-    &:hover, &:active, &:focus
-      background: $button-pro-bg-color-hover
+    .indicator-position
+      position: absolute
+      bottom: rem(5)
+      left: rem(5)
+      .comp-indicator
+        >div
+          border: 2px solid white
+          height: rem(15)
+          width: rem(15)
+          &.on
+            background: $dark-green
+          &.off
+            background: $dark-red
+
+  .middle-area
+    flex: 1 1 auto
+    overflow-y: auto
+
+  .bottom-area
+    color: $bottom-area-color
+    box-sizing: border-box
+    background-color: $bottom-area-bg-color
+    min-height: rem(110)
+    text-align: center
+    .title
+      padding: rem(1)
+      font-size: $font-size-m
+      text-transform: uppercase
+      border-bottom: 1px solid $bottom-area-color
+
+    .date-time
+      display: flex
+      align-items: center
+      width: rem(200)
+      margin: auto
+      .date
+        flex: 1 1 rem(90)
+        .day
+          font-size: $font-size-l
+          font-weight: bold
+          display: block
+
+        .month
+          font-size: $font-size-m
+          margin-top: rem(-15)
+          display: block
+
+      .schedule
+        flex: 1 1 rem(110)
+        margin-left: rem(10)
+        border-left: 1px solid $bottom-area-color
+        .icon
+          font-size: $font-size-m
+        .time
+          margin-right: rem(5)
+
+    .button-pro
+      padding: rem(2) auto
+      width: rem(200)
+      background: $button-pro-bg-color
+      font-size: $font-size-m
+      display: block
+      margin: 0 auto
+      border-radius: 4px
       color: $profesional-menu-color
-      outline: none
+      text-transform: uppercase
+      font-weight: bold
+      transition: background 0.4s ease-in-out
+      &:hover, &:active, &:focus
+        background: $button-pro-bg-color-hover
+        color: $profesional-menu-color
+        outline: none
 
-#menu-block
-  position: fixed
-  width: 250px
-  top: 0
-  bottom: 0
-  left: 0
-  background-color: rgba($dark-gray, .4)
-  z-index: 50
-  box-shadow: black 0 0 3px
-  cursor: not-allowed
+  #menu-block
+    position: fixed
+    width: 250px
+    top: 0
+    bottom: 0
+    left: 0
+    background-color: rgba($dark-gray, .4)
+    z-index: 50
+    box-shadow: black 0 0 3px
+    cursor: not-allowed
 
 //ANIMATION
 
