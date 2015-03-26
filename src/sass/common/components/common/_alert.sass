@@ -1,0 +1,41 @@
+$margin: 20px
+
+.comp-alert
+  box-sizing: border-box
+  min-width: 50%
+  position: fixed
+  top: 0
+  right: 0
+  padding: 0 $margin
+  z-index: 1000
+
+  &.hidden
+    display: none
+
+  .alert-close
+    position: absolute
+    right: $margin
+    top: 0
+    cursor: pointer
+    color: rgba(0,0,0,.5)
+    padding-right: 3px
+
+  .alert
+    background: black
+    color: white
+    font-weight: bold
+    padding: 1em 2em
+    border-bottom: 1px solid rgba(0,0,0,.5)
+    &:last-child
+      border-bottom-left-radius: 10px
+      border-bottom-right-radius: 10px
+  .level-error
+    background: #c0392b
+  .level-success
+    background: #27ae60
+  .level-info
+    background: #2980b9
+  .level-warning
+    background: #d35400
+  .level-debug
+    background: #7f8c8d
