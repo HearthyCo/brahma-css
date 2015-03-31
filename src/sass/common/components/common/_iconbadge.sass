@@ -1,5 +1,6 @@
 $red-bg:$dark-red
 $icon-shadow: $shadow
+$font-size-icon-home: $base-font-size * 3
 
 .comp-iconbadge
   +position (relative, null null null null)
@@ -7,30 +8,34 @@ $icon-shadow: $shadow
   margin-right: rem(25)
 
   .icon
-    vertical-align: sub
+    vertical-align: tex-top
     text-shadow:  0px 2px 3px rgba(50, 50, 50, 0.15)
     font-size: $font-size-xxxl-icon
-    +media($mobileOnly)
-      font-size: $font-size-xxxl
-      vertical-align: text-top
+    +media($mobile)
+      font-size: $font-size-icon-home
     +media($widescreen)
       font-size: 6.5rem
+      vertical-align: sub
 
   .badge
     background-color: $red-bg
     border-radius: 50%
     box-shadow: $shadow
     @extend %title
+    +ellipsis()
     +position (absolute, rem(-40) rem(-20) null null)
-    width: rem(50)
-    height: rem(50)
-    line-height: rem(50)
-    +media($mobileOnly)
-      width: rem(40)
-      height: rem(40)
-      line-height: rem(40)
-      top: rem(-35)
-      right: rem(-15)
+    width: rem(40)
+    height: rem(40)
+    line-height: rem(40)
+    top: rem(-35)
+    right: rem(-15)
+    +media($mobile)
+      font-size: $font-size-m
+      width: rem(30)
+      height: rem(30)
+      line-height: rem(30)
+      top: rem(-25)
+      right: rem(-10)
     +media($widescreen)
       width: rem(70)
       height: rem(70)

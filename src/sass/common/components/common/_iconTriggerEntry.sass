@@ -17,10 +17,14 @@
         @extend %title
         margin-bottom: 0
         font-weight: 400
+        +media($mobile)
+          font-size: $font-size-m
       .icon
         @extend %extra-title
         margin-right: rem(5)
         flex: 0 0 auto
+        +media($mobile)
+          font-size: $font-size-l
         &:before
           vertical-align: middle
         &.icon-cross

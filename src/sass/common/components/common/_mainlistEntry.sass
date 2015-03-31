@@ -1,3 +1,4 @@
+
 .comp-mainlistentry
   perspective: 1000px
   perspective-origin: 50% rem(170)
@@ -12,6 +13,10 @@
     height: rem(170)
     +media($widescreen)
       height: rem(250)
+    +media($mobile)
+      height: rem(110)
+      .label
+        font-size: $font-size-l
     user-select: none
     text-transform: uppercase
     font-weight: bold
