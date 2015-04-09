@@ -3,17 +3,15 @@
     background-color: $lighter-gray
     .page-sessionTypes
       .availableProfessionals
-        +display-flex ()
-        justify-content: flex-start
+        display: flex
+        justify-content: center
         padding: rem(20) rem(15) rem(25)
         @extend %text
-        &:before
-          content: ''
-          height: rem(25)
-          width: rem(25)
-          border-radius: 50%
-          display: inline-block
-          background: $gray
+        align-content: center
+        align-items: center
+        +media($mobile)
+          font-size: $font-size-s
+        .comp-indicator
           margin-right: rem(6)
           margin-bottom: rem(3)
         .professional-number
