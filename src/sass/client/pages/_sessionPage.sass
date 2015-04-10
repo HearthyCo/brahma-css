@@ -30,22 +30,22 @@ $padding-page: 2 * $button-height +rem(5)
         margin-top: rem(5)
         color: $white
         text-transform: uppercase
-        &:nth-child(3)
+        &#attach-button
           +position (fixed, null 0 rem(68) 0)
-        &:nth-child(4)
+        &#treatm-button
           +position (fixed, null 0 0 0)
 
         +media ($tablet)
           +calc(height, "#{$button-height} + 10px")
-          &:nth-child(3)
+          &#attach-button
             +position (fixed, null 0 rem(80) 0)
-          &:nth-child(4)
+          &#treatm-button
             +position (fixed, null 0 0 0)
 
         +media ($widescreen)
           padding: rem(25)
           +calc(height, "#{$button-height} + 45px")
-          &:nth-child(3)
+          &#attach-button
             +position (fixed, null 0 rem(115) 0)
-          &:nth-child(4)
+          &#treatm-button
             +position (fixed, null 0 0 0)
