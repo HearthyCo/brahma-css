@@ -8,6 +8,7 @@ $entry-button-bg-color: lighten($dark-bg, 30%)
     flex: 1 1 auto
   .intro
     font-size: $font-size-m
+    white-space: normal
   .icon-arrow-left
     cursor: pointer
   .comp-iconsublistentry
@@ -24,17 +25,6 @@ $entry-button-bg-color: lighten($dark-bg, 30%)
         font-size: $font-size-xl
     .entry-content
       font-size: $font-size-m
-      .comp-reportEntry, .comp-treatmentEntry
-        font-size: $font-size-m
-        background-color: $lighter-gray
-        padding: rem(20)
-        .label
-          font-size: $font-size-m
-          margin-bottom: rem(20)
-        textarea
-        button
-        .treatment-type
-          border-bottom: 1px solid white
   .end-session
     flex: 0 0 auto
     background-color: $white
@@ -43,7 +33,7 @@ $entry-button-bg-color: lighten($dark-bg, 30%)
     display: block
     button
       box-sizing: padding-box
-      background-color: $red
+      +bg-color-hover($red)
       color: $white
       padding: rem(7)
       display: block
