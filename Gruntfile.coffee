@@ -4,7 +4,13 @@ module.exports = ->
   @registerTask "lint", ["csslint"]
   @registerTask "css", ["compass", "postcss:all", "copy:css"]
   @registerTask "build", ["clean", "css"]
-  @registerTask "development", ["clean", "compass", "postcss:autoprefixer", "copy:css"]
+  @registerTask "development", [
+    "clean"
+    "compass"
+    "postcss:autoprefixer"
+    "copy:css"
+  ]
   @registerTask "preproduction", ["build"]
   @registerTask "production", ["build"]
+  @registerTask "mobile",  ['development']
   @registerTask "default", ['development']
