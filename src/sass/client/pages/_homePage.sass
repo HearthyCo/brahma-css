@@ -44,14 +44,17 @@ $newsession-height: rem(70) !default
           padding-bottom: rem(30)
       .new-session
         padding: rem(20)
-        background: $white
+        background: $dark-red
         min-height: $newsession-height
         z-index: 1
         box-sizing: border-box
         width: 100%
         +position (fixed, null 0 0 0)
+        .button-label
+          +color-hover($white)
         .icon
-          color: $red
+          color: $white
+          margin-right: 0
       .view-more
         display: block
         text-align: center
