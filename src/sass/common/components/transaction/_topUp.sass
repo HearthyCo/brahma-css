@@ -1,5 +1,4 @@
 .comp-topup
-  padding: rem(20) 0
 
   .topup-quantitypick
     border-bottom: 4px solid $lighter-gray
@@ -9,7 +8,7 @@
     .label
       @extend %text
       background: $lighter-gray
-      padding: rem(20) 0
+      padding: rem(15) 0
       text-align: center
       text-transform: uppercase
 
@@ -43,24 +42,12 @@
           &:before
             background: $red
 
-  .topup-confirm
+  .topup-history
 
     .label
       @extend %text
       text-align: center
       font-weight: lighter
-      margin: rem(20) 0
-
-    .button
-      @extend .cyan-button
-      @extend %text
-      color: $white
-      padding: rem(20)
-      font-weight: bold
-      text-transform: uppercase
-      width: 35%
-      margin: auto
-      text-align: center
-      .icon
-        margin: 0
-        @extend %title
+      margin: rem(10) 0
+      text-transform: inherit
+    
