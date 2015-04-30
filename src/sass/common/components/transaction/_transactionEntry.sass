@@ -3,11 +3,10 @@
   justify-content: space-between
   color: $dark-gray
   @extend %text
-  margin: rem(3) 0
 
   .transaction-label
     +span-columns(3 of 7, block-collapse)
-    padding: rem(15) 0 rem(15) rem(15)
+    padding: rem(10) 0 rem(10) rem(10)
     +row()
     .session-reason
       font-weight: bold
@@ -27,7 +26,7 @@
   .transaction-value
     +span-columns(2 of 7, block-collapse)
     @extend %text
-    padding: rem(15) rem(15) rem(15) 0
+    padding: rem(10) rem(10) rem(10) 0
     text-align: right
     text-transform: uppercase
     font-weight: bold
