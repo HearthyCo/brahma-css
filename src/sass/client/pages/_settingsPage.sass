@@ -1,0 +1,32 @@
+.settingsPage
+  .comp-iconbutton
+    +bg-color-hover($bright-red)
+    position: fixed
+    bottom: 0
+    width: 100%
+    padding: rem(10)
+    color: $white
+    cursor: pointer
+    left: 0
+    &:hover
+      color: $white
+  .page-settingsPage
+    .select-wrapper
+      position: relative
+      select.comp-localeSelect
+        display: block
+        margin: 0
+        box-sizing: border-box
+        width: 100%
+        height: 100%
+        border: 1px solid transparent
+        cursor: pointer
+        -webkit-appearance: none
+        -moz-appearance: none
+        appearance: none
+        padding: 30px
+        background: $light-gray
+        z-index: 1
+        border-radius: 0px
+        @extend %title
+
