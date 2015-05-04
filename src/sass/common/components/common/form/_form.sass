@@ -1,15 +1,15 @@
-$form-icon-size: rem(65)
+$form-icon-size: rem(55)
 
 .comp-signupForm, .comp-loginForm, .comp-requestPasswordChangeForm
   @extend %text
   #email
     @extend .wrapper
     +display-flex()
-    margin: rem(10)
+    margin: rem(3) 0
   #password
     @extend .wrapper
     +display-flex()
-    margin: rem(10)
+    margin: rem(3) 0
   .label
     +display-flex()
     height: $form-icon-size
@@ -40,7 +40,7 @@ $form-icon-size: rem(65)
     @extend %small-text
     a
       color: $dark-gray
-      padding: 0 rem(10) rem(20)
+      padding: rem(5) 0 rem(10)
       display: block
 
   button, input[type="submit"]
@@ -48,15 +48,15 @@ $form-icon-size: rem(65)
     @extend .red-button
     font-family: "MuseoSans"
     border-radius: 0
-    padding: rem(20)
+    padding: rem(15)
     text-transform: uppercase
     width: 75%
     max-width: rem(350)
-    margin: rem(10) auto
+    margin: rem(15) auto rem(5)
     display: block
   .create-account, .start-session
-    margin-top: rem(50)
-    padding: rem(50)
+    margin-top: rem(20)
+    padding: rem(60)
     text-align: center
     background-color: $lighter-gray
     a
