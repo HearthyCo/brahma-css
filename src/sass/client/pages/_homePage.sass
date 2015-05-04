@@ -1,5 +1,5 @@
 $newsession-height: rem(110) !default
-
+$newsession-dark-red: darken($bright-red, 10%)
 .comp-page
   &.homePage
     padding-bottom: $newsession-height
@@ -49,46 +49,46 @@ $newsession-height: rem(110) !default
         right: 0
         left: 0
         .entry-button
-          @extend .red-button
+          +bg-color-hover($bright-red)
           z-index: 1
-          box-shadow: inset 0 0 0 5px $dark-red
+          box-shadow: inset 0 0 0 5px $newsession-dark-red
           .comp-iconbadge
-            margin-right: -5px
-            background-color: $dark-red
+            margin-right: rem(-5)
+            background-color: $newsession-dark-red
             border-radius: 50%
-            height: 100px
-            width: 100px
+            height: rem(100)
+            width: rem(100)
             .icon
               position: absolute
-              left: -20px
-              top: 40px
+              left: rem(-20)
+              top: rem(40)
             &:after
               position: absolute
               content: ''
-              height: 160px
+              height: rem(160)
               width: 5px
               display: block
-              background-color: $dark-red
-              top: -30px
-              left: -20px
+              background-color: $newsession-dark-red
+              top: rem(-30)
+              left: rem(-20)
             +media($mobileOnly)
-              height: 60px
-              width: 60px
+              height: rem(60)
+              width: rem(60)
               .icon
-                left: -12px
-                top: 20px
+                left: rem(-12)
+                top: rem(20)
               &:after
-                height: 100px
-                top: -20px
+                height: rem(100)
+                top: rem(-20)
             +media($widescreen)
-              height: 160px
-              width: 160px
+              height: rem(160)
+              width: rem(160)
               .icon
-                left: -10px
-                top: 70px
+                left: rem(-10)
+                top: rem(70)
               &:after
-                height: 240px
-                top: -40px
+                height: rem(240)
+                top: rem(-40)
 
       .view-more
         display: block
