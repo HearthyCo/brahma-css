@@ -60,33 +60,35 @@ $newsession-height: rem(110) !default
             width: 100px
             .icon
               position: absolute
-              left: -12px
-              top: 20px
+              left: -20px
+              top: 40px
             &:after
               position: absolute
               content: ''
-              height: 100px
+              height: 160px
               width: 5px
               display: block
               background-color: $dark-red
-              top: -20px
+              top: -30px
               left: -20px
             +media($mobileOnly)
               height: 60px
               width: 60px
               .icon
-                position: absolute
                 left: -12px
                 top: 20px
               &:after
-                position: absolute
-                content: ''
                 height: 100px
-                width: 5px
-                display: block
-                background-color: $dark-red
                 top: -20px
-                left: -20px
+            +media($widescreen)
+              height: 160px
+              width: 160px
+              .icon
+                left: -10px
+                top: 70px
+              &:after
+                height: 240px
+                top: -40px
 
       .view-more
         display: block

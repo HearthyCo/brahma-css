@@ -1,5 +1,4 @@
 $font-size-icon-home: $base-font-size * 3
-$mobileHome: new-breakpoint(min-width rem(1) max-width rem(415))
 .comp-mainlistentry
   perspective: 1000px
   perspective-origin: 50% rem(170)
@@ -14,7 +13,7 @@ $mobileHome: new-breakpoint(min-width rem(1) max-width rem(415))
     height: rem(170)
     +media($widescreen)
       height: rem(250)
-    +media($mobileHome)
+    +media($mobileOnly)
       height: rem(110)
       .label
         font-size: $font-size-l
