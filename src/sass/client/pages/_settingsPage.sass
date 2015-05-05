@@ -4,29 +4,43 @@
     position: fixed
     bottom: 0
     width: 100%
-    padding: rem(10)
+    padding: rem(25) 0
     color: $white
     cursor: pointer
     left: 0
+    text-transform: uppercase
+    .icon
+      vertical-align: text-top
     &:hover
       color: $white
-  .page-settingsPage
+  .page-settings
     .select-wrapper
       position: relative
+      &:after
+        content: "\e61d"
+        font-family: 'iconHearthy'
+        display: block
+        position: absolute
+        +size(auto)
+        right: rem(20)
+        top: rem(10)
+        @extend %extra-title
+
       select.comp-localeSelect
         display: block
         margin: 0
         box-sizing: border-box
         width: 100%
         height: 100%
-        border: 1px solid transparent
+        border: 0px solid transparent
         cursor: pointer
-        -webkit-appearance: none
-        -moz-appearance: none
-        appearance: none
-        padding: 30px
+        +appearance(none)
+        padding: rem(20)
         background: $light-gray
         z-index: 1
         border-radius: 0px
         @extend %title
+        text-transform: uppercase
+        font-weight: bold
+        outline: none
 
