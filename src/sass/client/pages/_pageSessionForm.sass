@@ -1,0 +1,61 @@
+.page-sessionForm
+  @extend .wrapper
+  @extend %text
+  form
+    margin-top: rem(30)
+  .step-1
+    textarea
+      min-height: rem(125)
+  .step-4
+    padding-bottom: rem(70)
+  .title
+    font-weight: 600
+    margin-bottom: rem(15)
+    display: block
+  textarea, input
+    transition: box-shadow 0.5s ease-in-out
+    box-shadow: transparent 0px 0px 0px 2px
+    border-radius: 0
+    background-color: $lighter-gray
+    padding: rem(5) rem(10)
+    border: 0
+    width: 100%
+    margin-bottom: rem(10)
+    min-height: rem(40)
+    &:active, &:focus
+      outline: none
+      box-shadow: $light-gray 0px 0px 0px 2px
+  .remove
+    margin-left: rem(20)
+    font-size: $font-size-s
+    +color-hover($gray)
+    position: relative
+    cursor: pointer
+    display: inline-block
+    &:before
+      content: ""
+      vertical-align: middle
+      +bg-color-hover($red)
+      height: 4px
+      width: 20px
+      display: inline-block
+      margin-right: 5px
+  .entries
+    margin-bottom: rem(20)
+  .textEntry
+    margin-bottom: rem(5)
+  button
+    +bg-color-hover($red)
+    text-transform: uppercase
+    border-radius: 0
+    border: 0
+    margin-bottom: rem(5)
+    &.begin
+      +bg-color-hover($bright-red)
+      margin-bottom: 0
+      position: fixed
+      bottom: 0
+      left: 0
+      right: 0
+      width: 100%
+      padding: rem(25) 0

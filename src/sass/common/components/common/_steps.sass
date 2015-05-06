@@ -1,0 +1,37 @@
+$font-size-step: $base-font-size * 0.7
+.comp-steps
+  display: flex
+  flex-direction: row
+  align-content: center
+  justify-content: space-between
+  margin: rem(15) 0
+
+  .icon
+    @extend %extra-title
+    cursor: pointer
+  .icon-arrow-left
+    +color-hover($gray)
+  .icon-arrow-right
+    +color-hover($red)
+    &.complete
+      cursor: default
+      color: transparent
+  .progress
+    display: flex
+    flex-direction: row
+  .step
+    background: $light-gray
+    padding: 1px 5px 0 rem(25)
+    color: $white
+    font-size: $font-size-step
+    margin-right: 2px
+    font-weight: bold
+    align-content: center
+    &:first-child
+      border-bottom-left-radius: rem(15)
+      border-top-left-radius: rem(15)
+    &:last-child
+      border-top-right-radius: rem(15)
+      border-bottom-right-radius: rem(15)
+    &.active
+      background: $red
