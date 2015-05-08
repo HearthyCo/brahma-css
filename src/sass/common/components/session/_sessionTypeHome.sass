@@ -1,0 +1,32 @@
+
+
+.comp-sessionTypeHome
+  display: flex
+  align-content: flex-start
+  justify-content: flex-start
+  font-size: $font-size-m
+  margin-bottom: rem(30)
+  .icon
+    font-size: $font-size-xxl
+    color: $medium-gray
+    margin-right: rem(10)
+    &:before
+      vertical-align: sub
+    &.icon-chat-free
+      color: $light-gray
+  .queue-length
+    font-size: $font-size-l
+    font-weight: bold
+  .queue-type
+    font-weight: bold
+  .start-session
+    font-size: $font-size-s
+
+  button
+    padding: rem(5) rem(10)
+    +bg-color-hover($green)
+    margin-left: rem(10)
+    font-weight: 300
+    text-transform: uppercase
+    border-radius: 6px
+    font-size: $font-size-s
