@@ -4,8 +4,8 @@ body.app-mobile
 
 .comp-mobileRoom
   position: absolute
-  top: rem(60)
-  bottom: rem(115)
+  top: rem(65)
+  bottom: rem(65)
   right: 0
   left: 0
 
@@ -20,7 +20,7 @@ body.app-mobile
   .room-footer
     @extend %container
     display: flex
-    padding: rem(25)
+    padding: rem(10)
     background-color: $lighter-gray
     position: fixed
     bottom: 0
@@ -37,10 +37,10 @@ body.app-mobile
       border: 0
       vertical-align: top
       font-family: "MuseoSans"
-      padding: rem(20)
-      min-height: rem(55)
+      min-height: rem(40)
+      margin-bottom: 0
       +media($widescreen)
-        min-height: rem(85)
+        min-height: rem(80)
       &:active, &:focus
         outline: none
         box-shadow: inset $light-gray 0px 0px 0px 2px
@@ -49,32 +49,36 @@ body.app-mobile
     .room-send
       @extend .red-button
       @extend %text
-      flex: 0 0 rem(100)
+      flex: 0 0 rem(75)
       text-transform: uppercase
       border-radius: 0
       border: none
-      height: rem(55)
-      padding: rem(10)
+      min-height: rem(40)
+      padding: 0
       vertical-align: top
       font-family: "MuseoSans"
       display: none
       +media($widescreen)
-        height: rem(85)
+        min-height: rem(80)
         flex-basis: rem(200)
     .upload
-      flex: 0 0 rem(100)
-      +color-hover($medium-gray)
-      @extend %extra-title
-      background: transparent
+      flex: 0 0 rem(75)
+      +bg-color-hover($medium-gray)
+      font-size: $font-size-xl
       border-radius: 0
       border: none
-      height: rem(55)
-      padding: rem(10) rem(0)
+      min-height: rem(40)
+      padding: rem(0)
       vertical-align: top
       font-family: "MuseoSans"
       font-weight: 100
+      color: $lighter-gray
+      .icon
+        &:before
+          vertical-align: top
       +media($widescreen)
-        height: rem(85)
+        font-size: $font-size-xxxl
+        min-height: rem(80)
         flex-basis: rem(200)
     &.has-text
       .room-send

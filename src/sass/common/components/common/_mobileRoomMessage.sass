@@ -2,17 +2,18 @@
 
   .message-body
     position: relative
-    margin: rem(20)
-    padding: rem(17)
+    margin: rem(5) rem(25)
+    padding: rem(10)
     background-color: $white
     width: auto
-    max-width: 70%
+    max-width: 75%
     display: inline-block
     border-radius: 6px
     z-index: 10
     text-align: left
     min-width: rem(70)
-    word-break: break-all
+    word-break: break-word
+    line-height: 1.3rem
     a
       color: $red
       font-weight: bold
@@ -21,28 +22,25 @@
         text-decoration: underline
     &:before
       position: absolute
-      bottom: rem(-20)
+      top: 0
       content: ''
       width: 0
       height: 0
       z-index: -1
+      +triangle(rem(30), $white, down)
 
   &.own
     text-align: right
     .message-body
       &:before
-        right: rem(20)
-        border-top: rem(25) solid transparent
-        border-bottom: rem(20) solid transparent
-        border-right: rem(30) solid $white
+        right: rem(-15)
 
   &.remote
     text-align: left
     .message-body
       &:before
-        border-top: rem(25) solid transparent
-        border-bottom: rem(20) solid transparent
-        border-left: rem(30) solid $white
+        left: rem(-15)
+
   &.preview
     .message-body
       padding: 0
@@ -73,3 +71,18 @@
           text-decoration: none
           .icon
             opacity: .8
+
+.no-doctor
+  .message-body
+    margin: rem(5) rem(25)
+    padding: rem(10)
+    background-color: $green
+    width: auto
+    display: inline-block
+    border-radius: 6px
+    z-index: 10
+    text-align: left
+    min-width: rem(70)
+    word-break: break-word
+    line-height: 1.3rem
+    color: $white
