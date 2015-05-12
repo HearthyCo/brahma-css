@@ -2,3 +2,8 @@
 textarea.inputMultiline
   resize: none
   overflow: auto
+
+  &.error
+    box-shadow: $red 0px 0px 0px 2px inset
+    &:active, &:focus
+      box-shadow: $red 0px 0px 0px 2px inset
