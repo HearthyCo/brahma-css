@@ -1,0 +1,109 @@
+.clientProfilePage
+  background: $lighter-gray
+  padding-bottom: rem(130)
+  .page-clientProfile
+    padding: rem(10) rem(15)
+    .intro
+      position: relative
+      text-align: center
+    h2
+      text-transform: uppercase
+      @extend %title
+      margin-bottom: rem(5)
+    p
+      @extend %text
+    .change-avatar
+      display: block
+      width: auto
+      margin: auto
+      margin-bottom: rem(5)
+      .avatar
+        width: rem(110)
+        height: rem(110)
+        border-radius: 50%
+        margin: auto
+        display: block
+        border: 4px solid $red
+      a
+        display: block
+        cursor: pointer
+        span
+          text-align: center
+        .icon
+          color: $red
+          @extend %title
+          vertical-align: text-top
+    .comp-profileDataForm
+      position: relative
+      input, label, select, button
+        @extend %text
+        +appearance(none)
+        outline: none
+      .title
+        @extend %text
+        font-weight: 600
+        margin-bottom: rem(5)
+      #name, #surname1, #surname2
+        .label
+          display: none
+        .field
+          input
+            background: $white
+            min-height: rem(45)
+            margin-bottom: rem(5)
+      #birthdate
+        .field
+          .select-form
+            cursor: pointer
+            margin-bottom: rem(15)
+            border: none
+            border-radius: 0
+            height: rem(45)
+            width: rem(45)
+            padding-left: 5px
+            @extend %text
+            font-weight: 600
+            &[name="day"]
+              width: 20%
+            &[name="month"]
+              width: 45%
+            &[name="year"]
+              width: 25%
+      #gender
+        .field-radio
+          label
+            cursor: pointer
+            margin-right: rem(15)
+            input[type="radio"]
+              padding: 0
+              background-color: transparent
+              border: none
+              &:before
+                content: ""
+                +size(rem(25))
+                vertical-align: sub
+                background: $light-gray
+                border: 4px solid $white
+                border-radius: 50%
+                display: inline-block
+                margin-right: rem(-2)
+                cursor: pointer
+              &:focus, &:active
+                box-shadow: transparent 0px 0px 0px 0px
+              &:checked
+                &:before
+                  background: $red
+      .label
+        text-transform: none
+
+      button
+        padding: rem(20) 0
+        border-radius: none
+        border: none
+        width: 100%
+        text-align: center
+        position: fixed
+        bottom: 0
+        left: 0
+        right: 0
+        +bg-color-hover($red)
