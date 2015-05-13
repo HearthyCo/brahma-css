@@ -39,6 +39,13 @@
       border-left: 4px solid $light-gray
       margin-left: rem(5)
   .message-body
+    -ms-word-break: break-all
+    word-break: break-all
+    -webkit-hyphens: auto
+    -moz-hyphens: auto
+    hyphens: auto
+    // Non standard for webkit
+    word-break: break-word
     .sent-img
       margin-left: rem(15)
       span

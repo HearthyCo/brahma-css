@@ -1,0 +1,38 @@
+.comp-sessionFinished
+  +display-flex()
+  +position (fixed, 0 0 0 0)
+  z-index: 1000
+  background-color: $green
+
+  .content
+    padding: rem(5)
+    color: $white
+    text-align: center
+    h2
+      text-transform: uppercase
+    p
+      @extend %text
+    a
+      display: block
+      +bg-color-hover($red)
+      width: rem(300)
+      padding: rem(10)
+      color: $white
+      @extend %title
+      text-transform: uppercase
+      text-align: center
+      font-weight: bold
+      margin: rem(10) auto
+      &:hover
+        color: $white
+    .image-report
+      height: 200px
+      width: 200px
+      background-image: url(res/images/report.png)
+      background-size: contain
+      background-repeat: no-repeat
+      margin: rem(50) auto 0
+
+
+
+
