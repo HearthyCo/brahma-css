@@ -7,7 +7,7 @@
     color: $white
     @extend .blue-button
     user-select: none
-    padding: rem(25) 10%
+    padding: rem(25) 4%
     .label
       h2
         @extend %title
@@ -15,11 +15,12 @@
       p
         @extend %text
         margin-bottom: 0
-        text-transform: lowercase
+        text-transform: initial
         font-weight: normal
     .icon-right
       @extend %extra-icon
       transition: transform 0.2s ease-in-out
+      margin-right: 0
   .entry-content
     background-color: $white
     overflow: hidden
