@@ -13,8 +13,17 @@
       vertical-align: text-top
     &:hover
       color: $white
+  .comp-sublistentry
+    margin-top: rem(5)
+    .entry-button
+      +bg-color-hover($light-gray)
+      padding: rem(20) rem(10)
+      color: $dark-gray
+    .icon
+      @extend %extra-title
+
   .page-settings
-    .select-wrapper
+    .settings-wrapper
       position: relative
       &:after
         content: "\e61d"
@@ -22,11 +31,12 @@
         display: block
         position: absolute
         +size(auto)
-        right: rem(20)
+        right: rem(10)
         top: rem(10)
         @extend %extra-title
 
       select.comp-localeSelect
+        color: $dark-gray
         display: block
         margin: 0
         box-sizing: border-box
@@ -35,8 +45,8 @@
         border: 0px solid transparent
         cursor: pointer
         +appearance(none)
-        padding: rem(20)
-        background: $light-gray
+        padding: rem(20) rem(10)
+        +bg-color-hover($light-gray)
         z-index: 1
         border-radius: 0px
         @extend %title
